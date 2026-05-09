@@ -1,14 +1,17 @@
 {%- liquid
   assign companion_handle = nil
   assign companion_blurb = nil
+  assign companion_link_text = nil
 
   case product.handle
     when 'the-menopause-strength-blueprint'
       assign companion_handle = 'the-glp-1-companion-nutrition-muscle-retention-guide'
       assign companion_blurb = "If you're also managing your weight or appetite alongside your fitness goals, the GLP-1 Companion covers the nutrition side in the same practical, plain-English style."
+      assign companion_link_text = "View the GLP-1 Companion →"
     when 'the-glp-1-companion-nutrition-muscle-retention-guide'
       assign companion_handle = 'the-menopause-strength-blueprint'
       assign companion_blurb = "Nutrition and movement work best together. The Menopause Strength Blueprint gives you the training structure to protect your muscle while you're in a calorie deficit."
+      assign companion_link_text = "View the Menopause Strength Blueprint →"
   endcase
 -%}
 
@@ -23,7 +26,7 @@
             <p style="font-weight: 600; font-size: 1rem; margin: 0;">{{ companion.title }}</p>
             <p style="margin: 0; font-size: 0.95rem; line-height: 1.55; opacity: 0.8;">{{ companion_blurb }}</p>
           </div>
-          <a href="{{ companion.url }}" class="link" style="font-size: 0.9rem; align-self: flex-start;">View {{ companion.title }} &rarr;</a>
+          <a href="{{ companion.url }}" class="link" style="font-size: 0.9rem; align-self: flex-start;">{{ companion_link_text }}</a>
         </div>
       </div>
     </div>
