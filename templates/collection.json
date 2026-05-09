@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "banner": {
@@ -23,10 +32,39 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "seo_content": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Downloadable PDF Guides for Women's Health & Wellness",
+            "heading_size": "h2"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>GuideCraft guides are written specifically for women aged 30–60 navigating real-life health and wellness challenges. From menopause management to fitness, nutrition, and practical self-improvement — each guide delivers clear, actionable advice you can use straight away. All guides are delivered as instant PDF downloads compatible with any device. <a href='/collections/all'>Browse all guides</a> or <a href='/pages/faq'>visit our FAQ</a> to learn more.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "color_scheme": "scheme-2",
+        "full_width": true,
+        "padding_top": 36,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "banner",
-    "product-grid"
+    "product-grid",
+    "seo_content"
   ]
 }

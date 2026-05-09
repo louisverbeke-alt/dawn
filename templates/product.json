@@ -103,14 +103,10 @@
       ],
       "settings": {
         "enable_sticky_info": true,
-        "color_scheme": "",
         "media_size": "large",
         "constrain_to_viewport": true,
-        "media_fit": "contain",
         "gallery_layout": "stacked",
         "mobile_thumbnails": "hide",
-        "media_position": "left",
-        "image_zoom": "lightbox",
         "hide_variants": true,
         "enable_video_looping": false,
         "padding_top": 36,
@@ -124,13 +120,13 @@
           "type": "heading",
           "settings": {
             "heading": "Practical Guidance for Real Life",
-            "heading_size": "h1"
+            "heading_size": "h2"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>GuideCraft guides are written specifically for women navigating health and wellness challenges. Whether you're managing menopause, building a fitness routine, or looking for practical self-improvement strategies — our guides are designed to be genuinely useful, not just interesting to read.</p>",
+            "text": "<p>GuideCraft guides are written specifically for women navigating health and wellness challenges. Whether you're managing menopause, building a fitness routine, improving your nutrition, or looking for practical self-improvement strategies — our guides are designed to be genuinely useful, not just interesting to read. <a href='/collections/all'>Browse all guides</a> or <a href='/pages/faq'>read our FAQ</a> to find the right fit for you.</p>",
             "text_style": "body"
           }
         }
@@ -140,16 +136,13 @@
         "text"
       ],
       "settings": {
-        "image": "shopify://shop_images/ChatGPT_Image_May_9_2026_at_10_08_30_AM.png",
         "height": "small",
         "desktop_image_width": "medium",
         "layout": "text_first",
-        "image_behavior": "none",
         "content_layout": "no-overlap",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "left",
-        "section_color_scheme": "",
         "color_scheme": "scheme-2",
         "padding_top": 36,
         "padding_bottom": 36
@@ -201,14 +194,12 @@
     "related-products": {
       "type": "related-products",
       "settings": {
-        "heading": "You May Also Like",
+        "heading": "You May Also Like — Related Wellness Guides",
         "heading_size": "h2",
-        "products_to_show": 4,
         "columns_desktop": 4,
         "columns_mobile": "2",
         "color_scheme": "scheme-1",
         "image_ratio": "square",
-        "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
