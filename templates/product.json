@@ -34,11 +34,23 @@
           "type": "price",
           "settings": {}
         },
+        "trust_bar": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<p style=\"font-size:0.85rem;color:#555;margin:0.5rem 0;\">✓ Instant download after purchase &nbsp;·&nbsp; ✓ Yours to keep forever &nbsp;·&nbsp; ✓ Plain English, no jargon &nbsp;·&nbsp; ✓ Questions? We reply within 1–2 days</p>"
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": false
+          }
+        },
+        "satisfaction_promise": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<p style=\"font-size:0.82rem;color:#666;margin:0.75rem 0 0;\">Not happy with your download? If something isn't working or the guide isn't what you expected, email us within 7 days at <a href=\"mailto:guidecrafted@gmail.com\">guidecrafted@gmail.com</a> and we'll make it right.</p>"
           }
         },
         "description": {
@@ -93,7 +105,9 @@
         "title",
         "caption",
         "price",
+        "trust_bar",
         "buy_buttons",
+        "satisfaction_promise",
         "description",
         "collapsible-row-0",
         "collapsible-row-1",

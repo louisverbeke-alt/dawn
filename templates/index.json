@@ -15,24 +15,24 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Practical Health & Wellness Guides for Women",
+            "heading": "You deserve clear answers, not more confusion.",
             "heading_size": "h0"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "Downloadable PDF guides for women navigating menopause, building fitness habits, improving nutrition, and taking charge of their wellness. Written in plain English — start reading in minutes.",
+            "text": "GuideCraft makes it simple. Downloadable PDF guides written specifically for women navigating menopause, fitness, nutrition, parenting, and relationships — in plain English, with no fluff.",
             "text_style": "body"
           }
         },
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop All Guides",
+            "button_label_1": "Find Your Guide",
             "button_link_1": "shopify://collections/all",
             "button_style_secondary_1": false,
-            "button_label_2": "Read Our Blog",
+            "button_label_2": "Read the Blog",
             "button_link_2": "shopify://blogs/news",
             "button_style_secondary_2": true
           }
@@ -246,14 +246,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Get Wellness Tips & New Guide Alerts",
+            "heading": "Practical tips for women who want real answers — not overwhelm.",
             "heading_size": "h2"
           }
         },
         "paragraph": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>Join women taking charge of their health. Occasional tips on menopause, fitness, nutrition, and new GuideCraft releases — no spam, unsubscribe any time.</p>"
+            "text": "<p>Join women navigating menopause, fitness, nutrition, and everyday life. We send occasional tips, new guide announcements, and honest information — no spam, no pressure, unsubscribe any time.</p>"
           }
         },
         "email_form": {

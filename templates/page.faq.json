@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -22,18 +31,54 @@
         "q2": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Can I get a refund?",
+            "heading": "Do you offer refunds?",
             "icon": "chat_bubble",
-            "row_content": "<p>Refunds are not standard for digital downloads. For exceptional cases, please contact us at guidecrafted@gmail.com and we'll do our best to help.</p>",
+            "row_content": "<p>Because our guides are digital files delivered instantly, we're not able to offer refunds once the download link has been accessed. That said, if you have a technical problem with your file, or if something about your experience isn't right, please email us at guidecrafted@gmail.com within 7 days of purchase and we'll do our best to help.</p>",
             "page": ""
           }
         },
         "q3": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Who are the guides for?",
+            "heading": "Are the guides written by experts?",
             "icon": "star",
-            "row_content": "<p>The guides offer support and reassurance for personal experiences and challenges. Written specifically for women navigating real-life health and wellness situations, in plain language you can use straight away.</p>",
+            "row_content": "<p>Our guides are researched and written to reflect current, evidence-informed thinking on each topic. They are educational resources — not medical advice — and are designed to help you feel more informed and prepared, not to replace a conversation with your doctor.</p>",
+            "page": ""
+          }
+        },
+        "q4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I print the guide?",
+            "icon": "clipboard",
+            "row_content": "<p>Yes. All our guides are formatted to print cleanly on standard A4 or US Letter paper. You can keep a digital copy and a printed one — whatever works best for you.</p>",
+            "page": ""
+          }
+        },
+        "q5": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is this a subscription? Will I be charged again?",
+            "icon": "price_tag",
+            "row_content": "<p>No. Every purchase is a single, one-time payment. You will never be charged again for a guide you've already bought.</p>",
+            "page": ""
+          }
+        },
+        "q6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do I need to create an account to buy?",
+            "icon": "lock",
+            "row_content": "<p>No account needed. You check out as a guest, and your download link is sent to your email address straight away.</p>",
+            "page": ""
+          }
+        },
+        "q7": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is this guide right for me if I haven't been diagnosed with anything?",
+            "icon": "heart",
+            "row_content": "<p>Yes. Our guides are written for women who want to be proactive and informed — you don't need a diagnosis to benefit. If you're navigating a specific health condition, always discuss any changes with your healthcare provider.</p>",
             "page": ""
           }
         }
@@ -41,7 +86,11 @@
       "block_order": [
         "q1",
         "q2",
-        "q3"
+        "q3",
+        "q4",
+        "q5",
+        "q6",
+        "q7"
       ],
       "settings": {
         "caption": "",
