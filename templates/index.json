@@ -12,20 +12,6 @@
     "image_banner": {
       "type": "image-banner",
       "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Practical Health & Wellness Guides for Women",
-            "heading_size": "h0"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "Downloadable PDF guides for women navigating menopause, building fitness habits, improving nutrition, and taking charge of their wellness. Written in plain English — start reading in minutes.",
-            "text_style": "body"
-          }
-        },
         "button": {
           "type": "buttons",
           "settings": {
@@ -34,22 +20,22 @@
             "button_style_secondary_1": false,
             "button_label_2": "Read Our Blog",
             "button_link_2": "shopify://blogs/news",
-            "button_style_secondary_2": true
+            "button_style_secondary_2": false
           }
         }
       },
       "block_order": [
-        "heading",
-        "text",
         "button"
       ],
       "settings": {
+        "image": "shopify://shop_images/ChatGPT_Image_May_9_2026_at_09_50_32_AM.png",
         "image_overlay_opacity": 40,
         "image_height": "large",
+        "image_behavior": "none",
         "desktop_content_position": "bottom-center",
         "desktop_content_alignment": "center",
-        "show_text_box": true,
-        "color_scheme": "scheme-3",
+        "show_text_box": false,
+        "color_scheme": "scheme-1",
         "stack_images_on_mobile": false,
         "mobile_content_alignment": "center",
         "show_text_below": false
@@ -86,6 +72,8 @@
         "text"
       ],
       "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "scheme-1",
         "full_width": true,
         "padding_top": 36,
@@ -99,13 +87,21 @@
         "products_to_show": 8,
         "title": "Our Guides",
         "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
         "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
         "show_view_all": true,
+        "view_all_style": "solid",
         "color_scheme": "scheme-1",
         "image_ratio": "adapt",
+        "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
+        "quick_add": "none",
         "columns_mobile": "2",
         "swipe_on_mobile": true,
         "padding_top": 36,
