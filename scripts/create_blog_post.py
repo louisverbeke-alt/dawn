@@ -44,64 +44,95 @@ OAUTH_SCOPES   = "write_content,read_content,write_products,read_products"
 
 # ── Blog post content ─────────────────────────────────────────────────────────
 
-ARTICLE_TITLE  = "Practical Wellness Guides for Real Women: Simple Support for Health, Fitness & Everyday Life"
-ARTICLE_HANDLE = "practical-wellness-guides-for-women"
+ARTICLE_TITLE  = "What No One Tells You About the Menopause Experience — And How to Feel Strong Through It"
+ARTICLE_HANDLE = "menopause-experience-symptoms-what-to-expect"
 ARTICLE_AUTHOR = "GuideCraft"
-SEO_TITLE      = "Practical Wellness Guides for Women & Moms | GuideCraft"
+ARTICLE_TAGS   = "menopause, perimenopause, women over 40, strength training, women's wellness, menopause symptoms"
+SEO_TITLE      = "What No One Tells You About the Menopause Experience"
 SEO_DESCRIPTION = (
-    "Discover practical downloadable wellness guides for women and moms. "
-    "GuideCraft offers simple PDF guides for health, fitness, menopause, "
-    "nutrition, and real-life self-improvement."
+    "Going through menopause and not sure what to expect? Discover common symptoms, "
+    "energy shifts, and simple steps to feel strong and like yourself again."
 )
 
 ARTICLE_BODY_HTML = """
-<p>If you're a woman in your 30s, 40s, 50s, or 60s, you already know the feeling: you open your browser to search for something simple — like how to eat better or manage the discomfort of changing hormones — and suddenly you're drowning in conflicting advice, expensive programmes, and articles that leave you more confused than when you started.</p>
+<p>If you have recently found yourself wondering why you feel so different — exhausted some days, wide awake at 3am on others, or just not quite like yourself — you are not imagining it. The menopause experience is real, and for many women it arrives quietly before they even realise what is happening. You do not have to figure this out alone, and you do not have to simply push through.</p>
 
-<p>You're not looking for a complete lifestyle overhaul. You're looking for something practical. Something that works in your actual life — between the school run, the work meetings, the appointments, and the quiet moments you finally get to yourself.</p>
+<h2>Why the Menopause Experience Feels So Unexpected</h2>
 
-<p>That's what GuideCraft is built for.</p>
+<p>Most women grow up hearing very little about menopause. When it arrives — often in your 40s or early 50s — it can feel like your body has changed the rules without warning you first.</p>
 
-<h2>Why Wellness Information Can Feel So Overwhelming</h2>
+<p>The truth is, menopause is a natural life stage, not a breakdown. Your body is going through a significant hormonal shift, and every system notices it. Sleep, energy, mood, metabolism, and joints are all connected to the hormones that are gradually changing.</p>
 
-<p>The internet is full of wellness content. But most of it falls into one of two camps: either it's so basic it tells you nothing new, or it's so complex that following it feels like a part-time job.</p>
+<p>Perimenopause — the years leading up to your final period — is usually where symptoms first appear. This phase can last anywhere from a few years to over a decade. Knowing that it has a name, and has support, can make it feel far less frightening.</p>
 
-<p>Real wellness — the kind that actually fits into your life — is neither of those things. It's clear, actionable, and written for women who have other things going on. You don't need another 300-page book or a 12-week programme with a weekly live call. You need a guide you can open, read, and use.</p>
+<h2>The Most Common Menopause Symptoms Women Describe</h2>
 
-<h2>Menopause and Hormonal Changes: Getting the Information You Deserve</h2>
+<p>No two women experience menopause exactly the same way. Some sail through with mild changes. Others find it genuinely disruptive. Both experiences are valid.</p>
 
-<p>For many women between 40 and 60, navigating perimenopause and menopause brings a new set of questions. Sleep changes. Energy shifts. Body composition feels different. And finding straightforward, reassuring information — without scaremongering or oversimplified advice — can be surprisingly hard.</p>
+<p>The most frequently reported menopause symptoms include:</p>
 
-<p>A good wellness guide won't diagnose or prescribe. But it can explain what's commonly experienced, what lifestyle factors are worth exploring, and what questions might be worth raising with your healthcare provider. That kind of clarity matters — and it shouldn't be hard to find.</p>
+<ul>
+<li>Hot flashes and night sweats — sudden waves of heat that can strike at any time</li>
+<li>Sleep problems — difficulty falling asleep, waking frequently, or feeling unrefreshed</li>
+<li>Mood changes — irritability, low mood, anxiety, or feeling emotionally flat</li>
+<li>Brain fog — forgetting words, struggling to concentrate, feeling mentally slower</li>
+<li>Joint aches and stiffness — especially in the morning</li>
+<li>Changes in weight and body shape — particularly around the midsection</li>
+<li>Low energy — a bone-deep tiredness that rest does not always fix</li>
+</ul>
 
-<h2>Fitness That Fits Your Real Life</h2>
+<p>If you recognise yourself in that list, you are far from alone. Always talk to your doctor about symptoms that are affecting your daily life — they have more options available than ever before.</p>
 
-<p>Fitness content is often aimed at people with unlimited time, unlimited energy, and a burning desire to spend it at the gym. Most women over 30 don't fit that description — and they shouldn't have to.</p>
+<h2>What Menopause Does to Your Energy and Sleep</h2>
 
-<p>Sustainable fitness habits look different for everyone. For some women, it's building consistency with short daily movement. For others, it's understanding how to make strength work alongside a demanding schedule. The best fitness guidance meets you where you are — not where a personal trainer assumes you should be.</p>
+<p>One of the things women mention most is how much perimenopause and menopause disrupts sleep. Night sweats can wake you repeatedly. Hormonal shifts can make your brain feel alert at midnight and foggy by noon.</p>
 
-<p>Practical guides focused on fitness for real women tend to start from that premise. Not "how to get results fast," but "how to build habits that actually last."</p>
+<p>Poor sleep then affects everything else — your patience, your mood, your motivation to move. It is a cycle that can feel hard to break.</p>
 
-<h2>Nutrition: Simple, Sustainable, and Free from Fads</h2>
+<p>A few things many women find helpful:</p>
 
-<p>Nutrition advice online tends to swing between extremes. Keto. Intermittent fasting. "Eat this, never eat that." It's exhausting — and for most women, none of it sticks long-term.</p>
+<ul>
+<li>Keeping your bedroom cool and well-ventilated at night</li>
+<li>Reducing caffeine and alcohol, especially after midday</li>
+<li>Creating a gentle, consistent wind-down routine before bed</li>
+<li>Getting morning light, which helps regulate your body clock</li>
+</ul>
 
-<p>What tends to be more useful is simpler than any trend: understanding the basics of nourishing your body, getting enough protein and variety, and building habits around food that feel sustainable rather than punishing. No miracle foods. No calorie obsession. Just clear, evidence-informed guidance you can apply to your actual meals, in your actual kitchen.</p>
+<p>These are not miracle fixes. They are small, honest shifts that build a steadier foundation over time.</p>
 
-<h2>Why a Good PDF Guide Can Be More Useful Than Hours of Searching</h2>
+<h2>How Strength Training Supports You Through Menopause</h2>
 
-<p>There's a reason a well-written guide — even a short one — can be more useful than an evening of Googling. A guide is curated. Someone has already done the work of filtering out the noise, organising the information, and presenting it in a way that makes sense.</p>
+<p>Here is something that surprises many women: strength training is one of the most practical choices you can make during menopause.</p>
 
-<p>GuideCraft PDF guides are designed with exactly that in mind. Each one is concise, clearly structured, and written in plain English — so you can pick it up, understand it, and actually use it. No jargon. No filler. Just practical information, presented in a way that respects your time and intelligence.</p>
+<p>As oestrogen levels decline, your body loses muscle mass more quickly and bone density becomes more important. Building and maintaining muscle helps protect your bones, supports your metabolism, lifts your mood, and gives you back a real sense of control in your body.</p>
 
-<p>Because they're digital downloads, there's no waiting. You can be reading within minutes of purchase, and you'll have your guide to return to whenever you need it — on your phone, tablet, or laptop.</p>
+<p>You do not need to become a gym regular or lift heavy weights. Resistance-based movement — using your bodyweight, light dumbbells, or resistance bands — done consistently two to three times a week is enough to make a meaningful difference to how you feel.</p>
 
-<h2>Where to Start</h2>
+<p>Start exactly where you are, not where you think you should be. The best workout is always the one you will actually do.</p>
 
-<p>GuideCraft guides cover a range of topics relevant to women navigating health and wellness in their 30s, 40s, 50s, and beyond — from menopause support to fitness, nutrition, and everyday self-improvement.</p>
+<h2>Simple Daily Habits That Support Your Body Right Now</h2>
 
-<p>If you're not sure where to begin, the best place is simply to <a href="/collections/all">browse all available guides</a> and see what speaks to where you are right now. There's no pressure and no subscription — just practical resources you download and keep.</p>
+<p>Your daily habits have more impact than most people realise during menopause.</p>
 
-<p>Wellness doesn't have to be complicated. Sometimes, the most helpful thing you can do is find one good guide — and start there.</p>
+<p>Eat enough protein. Protein protects muscle mass, keeps energy steady, and helps you feel satisfied after meals. Include a source — eggs, fish, chicken, beans, or Greek yoghurt — at every meal.</p>
+
+<p>Stay hydrated. Hormonal changes affect how your body regulates temperature and fluid. Drinking enough water throughout the day supports your energy, skin, and focus.</p>
+
+<p>Manage stress where you can. High cortisol can make menopause symptoms feel worse. Even ten minutes of quiet — a walk, deep breathing, or time without your phone — helps your nervous system settle.</p>
+
+<p>Talk to other women. Connecting with others who understand what you are going through is genuinely supportive. You are not the only one navigating this season.</p>
+
+<h2>You Are Not Losing Yourself — You Are Changing</h2>
+
+<p>The menopause experience is not always easy, and it is okay to say that. But it is also not the end of energy, vitality, or feeling good in your body. Many women describe the years after menopause as a time when they feel clearer, more confident, and more grounded than ever before.</p>
+
+<p>You get to decide how you move through this season. With the right information and a little practical support, you can do it feeling strong.</p>
+
+<h2>Get Practical Support</h2>
+
+<p>If you want practical, step-by-step support for exactly this, <a href="https://guidecrafted.com/products/the-menopause-strength-blueprint">The Menopause Strength Blueprint</a> was created for women navigating perimenopause, menopause, and life after 40. It covers strength training, nutrition, bone health, energy, and daily habits designed to help you feel stronger and more in control — without overwhelm.</p>
+
+<p>👉 <a href="https://guidecrafted.com/products/the-menopause-strength-blueprint"><strong>Get The Menopause Strength Blueprint here</strong></a></p>
 """.strip()
 
 # ── Auth ──────────────────────────────────────────────────────────────────────
@@ -178,16 +209,21 @@ def oauth_authorization_code_flow():
     return token
 
 
-def get_access_token():
-    token = try_client_credentials()
-    if token:
-        print("  Auth: client_credentials  ✓")
-        return token
-    if TOKEN_CACHE_FILE.exists():
-        cached = TOKEN_CACHE_FILE.read_text().strip()
-        if cached:
-            print("  Auth: cached token  ✓")
-            return cached
+def get_access_token(force_reauth: bool = False):
+    if not force_reauth:
+        token = try_client_credentials()
+        if token:
+            print("  Auth: client_credentials  ✓")
+            return token
+        if TOKEN_CACHE_FILE.exists():
+            cached = TOKEN_CACHE_FILE.read_text().strip()
+            if cached:
+                print("  Auth: cached token  ✓")
+                return cached
+    else:
+        print("  Auth: --reauth flag set, clearing cache and running OAuth flow…")
+        if TOKEN_CACHE_FILE.exists():
+            TOKEN_CACHE_FILE.unlink()
     print("  Auth: launching OAuth flow…")
     return oauth_authorization_code_flow()
 
@@ -226,6 +262,8 @@ def rest(method, path, token, payload=None):
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
+    force_reauth = "--reauth" in sys.argv
+
     print("=" * 62)
     print("  GuideCraft — Shopify Blog Post Creator")
     print("=" * 62)
@@ -245,7 +283,7 @@ def main():
     print(f"  SHOPIFY_API_VERSION = {API_VERSION}")
     print()
 
-    token = get_access_token()
+    token = get_access_token(force_reauth=force_reauth)
     print()
 
     # ── 1. Inspect blog structure ────────────────────────────────
@@ -260,10 +298,13 @@ def main():
         blog = new_blog["blog"]
         print(f"  Created blog: '{blog['title']}' (id={blog['id']})")
     else:
-        # Prefer a blog named 'News' or 'Blog'; fall back to the first one
+        # Prefer Wellness Blog, then News, then any blog
         blog = next(
-            (b for b in blogs if b["title"].lower() in ("news", "blog", "wellness")),
-            blogs[0]
+            (b for b in blogs if b["title"].lower() == "wellness blog"),
+            next(
+                (b for b in blogs if b["title"].lower() in ("news", "blog")),
+                blogs[0]
+            )
         )
         print(f"  Found {len(blogs)} blog(s). Using: '{blog['title']}' (id={blog['id']})")
 
@@ -278,7 +319,7 @@ def main():
     if articles:
         a = articles[0]
         print(f"  Article already exists: id={a['id']}  handle={a['handle']}")
-        print(f"  URL: https://{SHOP}/blogs/{blog_handle}/{a['handle']}")
+        print(f"  URL: https://guidecrafted.com/blogs/{blog_handle}/{a['handle']}")
         print("  Nothing to do — article already published.")
         return
     print("  No duplicate found. Proceeding…")
@@ -292,6 +333,7 @@ def main():
             "author":     ARTICLE_AUTHOR,
             "body_html":  ARTICLE_BODY_HTML,
             "handle":     ARTICLE_HANDLE,
+            "tags":       ARTICLE_TAGS,
             "published":  True,
             "metafields": [
                 {
@@ -323,7 +365,7 @@ def main():
     confirm  = rest("GET", f"/blogs/{blog_id}/articles/{art_id}.json", token)
     a        = confirm["article"]
 
-    live_url = f"https://{SHOP}/blogs/{blog_handle}/{a['handle']}"
+    live_url = f"https://guidecrafted.com/blogs/{blog_handle}/{a['handle']}"
 
     print(f"  Title:      {a['title']}")
     print(f"  Handle:     {a['handle']}")
