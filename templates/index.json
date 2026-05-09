@@ -60,7 +60,7 @@
     "seo_h1": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<h1 class=\"h2\" style=\"text-align:center;max-width:72rem;margin:0 auto;\">Women's Health &amp; Wellness Guides — Menopause, Fitness &amp; Nutrition</h1>",
+        "custom_liquid": "<h1 class=\"h2\" style=\"text-align:center;max-width:72rem;margin:0 auto;\">Downloadable Health Guides for Women — Menopause, Fitness, Nutrition &amp; More</h1>",
         "color_scheme": "scheme-1",
         "padding_top": 52,
         "padding_bottom": 0
@@ -72,14 +72,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Practical Guides for Menopause, Fitness & Wellness",
+            "heading": "PDF Guides for Women: Menopause, Fitness, Nutrition & Parenting",
             "heading_size": "h2"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>At GuideCraft, we believe good information shouldn't be buried in long books or locked behind expensive programmes. Our downloadable PDF guides are concise, practical, and written specifically for women navigating real-life challenges — from managing menopause symptoms to building sustainable fitness habits and eating well for long-term health. <a href='/collections/all'>Browse all guides</a>, explore our <a href='/pages/faq'>FAQ</a>, or <a href='/blogs/news'>read our wellness blog</a> to get started.</p>"
+            "text": "<p>GuideCraft publishes practical, affordable downloadable PDF guides written specifically for women aged 30–60. Whether you need a <a href='/collections/all'>menopause guide</a>, a GLP-1 nutrition companion, a strength training plan, or trusted parenting advice — each guide is concise, jargon-free, and designed to help you take action straight away. <a href='/collections/all'>Browse all wellness guides</a>, explore our <a href='/pages/faq'>FAQ</a>, or <a href='/blogs/news'>visit our women's health blog</a> to get started.</p>"
           }
         }
       },
@@ -193,27 +193,27 @@
         "topic1": {
           "type": "column",
           "settings": {
-            "title": "Menopause & Fitness",
-            "text": "<p>Practical guides on strength training, nutrition, and body changes during perimenopause, menopause, and beyond.</p>",
-            "link_label": "Browse Guides",
+            "title": "Menopause & Perimenopause Guides",
+            "text": "<p>Downloadable guides covering strength training, hormonal changes, nutrition, sleep, and managing everyday menopause symptoms — written in plain English.</p>",
+            "link_label": "Browse Menopause Guides",
             "link": "shopify://collections/pdf-guides"
           }
         },
         "topic2": {
           "type": "column",
           "settings": {
-            "title": "Nutrition & Weight Management",
-            "text": "<p>Clear, evidence-informed nutrition guidance — including specialist support for women on GLP-1 medications.</p>",
-            "link_label": "Browse Guides",
+            "title": "GLP-1, Nutrition & Weight Management",
+            "text": "<p>Evidence-informed nutrition guides for sustainable weight management — including dedicated support for women using GLP-1 medications like Ozempic or Wegovy.</p>",
+            "link_label": "Browse Nutrition Guides",
             "link": "shopify://collections/pdf-guides"
           }
         },
         "topic3": {
           "type": "column",
           "settings": {
-            "title": "Parenting & Family",
-            "text": "<p>Warm, practical parenting guides to help you stay calm, connected, and confident through the everyday challenges of raising young children.</p>",
-            "link_label": "Browse Guides",
+            "title": "Parenting, Attachment & Family",
+            "text": "<p>Warm, practical parenting guides on attachment, child behaviour, and staying calm under pressure — for parents of babies, toddlers, and young children.</p>",
+            "link_label": "Browse Parenting Guides",
             "link": "shopify://collections/pdf-guides"
           }
         }

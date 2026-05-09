@@ -8,13 +8,21 @@
       "name": {{ shop.name | json }},
       "url": {{ shop.url | json }},
       "email": "guidecrafted@gmail.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ shop.url }}/cdn/shop/files/guidecraft-logo.png"
+      },
       "contactPoint": {
         "@type": "ContactPoint",
         "email": "guidecrafted@gmail.com",
         "contactType": "customer support",
         "availableLanguage": "English"
       },
-      "description": "GuideCraft sells practical downloadable PDF guides for women and moms aged 30–60, covering menopause, fitness, nutrition, parenting, and wellness."
+      "description": "GuideCraft sells practical downloadable PDF guides for women and moms aged 30–60, covering menopause, fitness, nutrition, parenting, and wellness.",
+      "sameAs": [
+        "{{ settings.social_pinterest_link }}",
+        "{{ settings.social_instagram_link }}"
+      ]
     },
     {
       "@type": "WebSite",
@@ -31,14 +39,60 @@
         "query-input": "required name=search_term_string"
       }
     }
+    {%- if request.page_type == 'index' -%}
+    ,{
+      "@type": "WebPage",
+      "@id": "{{ shop.url }}/#webpage",
+      "url": {{ shop.url | json }},
+      "name": "Downloadable Wellness Guides for Women | GuideCraft",
+      "description": "Practical downloadable PDF guides for women aged 30–60. Topics include menopause, fitness, nutrition, GLP-1 support, parenting, and self-improvement. Instant delivery.",
+      "isPartOf": { "@id": "{{ shop.url }}/#website" },
+      "about": { "@id": "{{ shop.url }}/#organization" },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": {{ shop.url | json }}
+          }
+        ]
+      }
+    }
+    {%- endif -%}
     {%- if request.page_type == 'product' -%}
     ,{
-      "@type": "Product",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": {{ shop.url | json }}
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "All Guides",
+          "item": "{{ shop.url }}/collections/all"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": {{ product.title | json }},
+          "item": "{{ shop.url }}/products/{{ product.handle }}"
+        }
+      ]
+    }
+    ,{
+      "@type": ["Product", "DigitalDocument"],
       "@id": "{{ shop.url }}/products/{{ product.handle }}/#product",
       "name": {{ product.title | json }},
       "description": {{ product.description | strip_html | truncate: 500 | json }},
       "url": "{{ shop.url }}/products/{{ product.handle }}",
       "sku": {{ product.selected_or_first_available_variant.sku | default: product.id | json }},
+      "encodingFormat": "application/pdf",
       "brand": {
         "@type": "Brand",
         "name": {{ shop.name | json }}
@@ -61,7 +115,7 @@
           "@type": "MerchantReturnPolicy",
           "applicableCountry": "IE",
           "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-          "merchantReturnDays": 0,
+          "merchantReturnDays": 7,
           "returnMethod": "https://schema.org/ReturnByMail",
           "returnFees": "https://schema.org/FreeReturn"
         },
@@ -86,8 +140,7 @@
               "maxValue": 0,
               "unitCode": "DAY"
             }
-          },
-          "doesNotShip": true
+          }
         }
       }
       {%- if product.featured_image -%}
@@ -97,24 +150,23 @@
       {%- endif -%}
     }
     {%- endif -%}
-    {%- if request.page_type == 'article' -%}
+    {%- if request.page_type == 'collection' -%}
     ,{
-      "@type": "BlogPosting",
-      "@id": "{{ shop.url }}/blogs/{{ blog.handle }}/{{ article.handle }}/#article",
-      "headline": {{ article.title | json }},
-      "description": {{ article.excerpt_or_content | strip_html | truncate: 200 | json }},
-      "url": "{{ shop.url }}/blogs/{{ blog.handle }}/{{ article.handle }}",
-      "datePublished": "{{ article.published_at | date: '%Y-%m-%d' }}",
-      "dateModified": "{{ article.updated_at | date: '%Y-%m-%d' }}",
-      "publisher": { "@id": "{{ shop.url }}/#organization" },
-      "author": { "@id": "{{ shop.url }}/#organization" },
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "{{ shop.url }}/blogs/{{ blog.handle }}/{{ article.handle }}"
-      }
-      {%- if article.image -%}
-      ,"image": "https:{{ article.image | image_url: width: 1200 }}"
-      {%- endif -%}
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": {{ shop.url | json }}
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": {{ collection.title | json }},
+          "item": "{{ shop.url }}{{ collection.url }}"
+        }
+      ]
     }
     {%- endif -%}
   ]

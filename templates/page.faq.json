@@ -9,6 +9,15 @@
  */
 {
   "sections": {
+    "faq_schema": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"How quickly is my PDF delivered?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Immediately via download link after purchase. You'll receive an email with your link within minutes — no waiting, no shipping.\"}},{\"@type\":\"Question\",\"name\":\"Do you offer refunds?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Because our guides are digital files delivered instantly, we're not able to offer refunds once the download link has been accessed. If you have a technical problem or if something isn't right, please email us at guidecrafted@gmail.com within 7 days of purchase.\"}},{\"@type\":\"Question\",\"name\":\"Are the guides written by experts?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Our guides are researched and written to reflect current, evidence-informed thinking on each topic. They are educational resources — not medical advice — and are designed to help you feel more informed and prepared.\"}},{\"@type\":\"Question\",\"name\":\"Can I print the guide?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. All our guides are formatted to print cleanly on standard A4 or US Letter paper. You can keep a digital copy and a printed one — whatever works best for you.\"}},{\"@type\":\"Question\",\"name\":\"Is this a subscription? Will I be charged again?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"No. Every purchase is a single, one-time payment. You will never be charged again for a guide you've already bought.\"}},{\"@type\":\"Question\",\"name\":\"Do I need to create an account to buy?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"No account needed. You check out as a guest, and your download link is sent to your email address straight away.\"}},{\"@type\":\"Question\",\"name\":\"Is this guide right for me if I haven't been diagnosed with anything?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. Our guides are written for women who want to be proactive and informed — you don't need a diagnosis to benefit. Always discuss any health changes with your healthcare provider.\"}}]}</script>",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "main": {
       "type": "main-page",
       "settings": {
@@ -109,6 +118,7 @@
     }
   },
   "order": [
+    "faq_schema",
     "main",
     "faq"
   ]

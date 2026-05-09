@@ -39,14 +39,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Downloadable PDF Guides for Women's Health & Wellness",
+            "heading": "Downloadable PDF Health & Wellness Guides for Women",
             "heading_size": "h2"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>GuideCraft guides are written specifically for women aged 30–60 navigating real-life health and wellness challenges. From menopause management to fitness, nutrition, and practical self-improvement — each guide delivers clear, actionable advice you can use straight away. All guides are delivered as instant PDF downloads compatible with any device. <a href='/collections/all'>Browse all guides</a> or <a href='/pages/faq'>visit our FAQ</a> to learn more.</p>"
+            "text": "<p>GuideCraft's downloadable PDF guides are written specifically for women aged 30–60 navigating real-life challenges. Our range covers <strong>menopause and perimenopause</strong>, <strong>strength training and fitness</strong>, <strong>GLP-1 medication support</strong>, <strong>nutrition and weight management</strong>, <strong>parenting and attachment</strong>, and everyday self-improvement. Every guide is instant to download, compatible with any device, and written in plain English — no jargon, no fluff. Have questions? <a href='/pages/faq'>Visit our FAQ</a> or <a href='/blogs/news'>read our women's health blog</a>.</p>"
           }
         }
       },

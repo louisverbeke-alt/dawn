@@ -144,7 +144,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>GuideCraft guides are written specifically for women navigating health and wellness challenges. Whether you're managing menopause, building a fitness routine, improving your nutrition, or looking for practical self-improvement strategies — our guides are designed to be genuinely useful, not just interesting to read. <a href='/collections/all'>Browse all guides</a> or <a href='/pages/faq'>read our FAQ</a> to find the right fit for you.</p>",
+            "text": "<p>GuideCraft guides are written specifically for women navigating health and wellness challenges. Whether you're managing <a href='/collections/all'>menopause symptoms</a>, building a fitness routine, improving your nutrition, getting support alongside GLP-1 medication, or looking for trusted parenting guidance — our <a href='/collections/all'>downloadable PDF guides</a> are designed to be genuinely useful, not just interesting to read. <a href='/pages/faq'>Read our FAQ</a> to find the right fit for you.</p>",
             "text_style": "body"
           }
         }

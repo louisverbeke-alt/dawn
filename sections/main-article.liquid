@@ -82,6 +82,15 @@
     {%- endcase -%}
   {%- endfor -%}
 
+  <div
+    class="page-width page-width--narrow element-margin-top{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+    style="border-top: 1px solid rgba(var(--color-foreground), 0.1); padding-top: 2rem; margin-bottom: 1rem;"
+  >
+    <p style="font-size: 0.9rem; margin: 0 0 0.5rem;">
+      Looking for practical, jargon-free guidance you can keep? Browse our <a href="/collections/all" class="link">downloadable PDF guides for women</a> — covering menopause, fitness, nutrition, GLP-1 support, parenting, and more. Instant delivery, yours to keep forever.
+    </p>
+  </div>
+
   <div class="article-template__back element-margin-top center{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
     <a href="{{ blog.url }}" class="article-template__link link animate-arrow">
       <span class="icon-wrap">
