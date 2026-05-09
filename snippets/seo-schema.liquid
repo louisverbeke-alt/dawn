@@ -1,0 +1,122 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{ shop.url }}/#organization",
+      "name": {{ shop.name | json }},
+      "url": {{ shop.url | json }},
+      "email": "guidecrafted@gmail.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "guidecrafted@gmail.com",
+        "contactType": "customer support",
+        "availableLanguage": "English"
+      },
+      "description": "GuideCraft sells practical downloadable PDF guides for women and moms aged 30–60, covering menopause, fitness, nutrition, parenting, and wellness."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ shop.url }}/#website",
+      "url": {{ shop.url | json }},
+      "name": {{ shop.name | json }},
+      "publisher": { "@id": "{{ shop.url }}/#organization" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "{{ shop.url }}/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    {%- if request.page_type == 'product' -%}
+    ,{
+      "@type": "Product",
+      "@id": "{{ shop.url }}/products/{{ product.handle }}/#product",
+      "name": {{ product.title | json }},
+      "description": {{ product.description | strip_html | truncate: 500 | json }},
+      "url": "{{ shop.url }}/products/{{ product.handle }}",
+      "sku": {{ product.selected_or_first_available_variant.sku | default: product.id | json }},
+      "brand": {
+        "@type": "Brand",
+        "name": {{ shop.name | json }}
+      },
+      "audience": {
+        "@type": "PeopleAudience",
+        "suggestedGender": "female",
+        "suggestedMinAge": 30,
+        "suggestedMaxAge": 60
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "{{ shop.url }}/products/{{ product.handle }}",
+        "priceCurrency": {{ cart.currency.iso_code | json }},
+        "price": {{ product.selected_or_first_available_variant.price | divided_by: 100.0 | json }},
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": { "@id": "{{ shop.url }}/#organization" },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IE",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 0,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "EUR"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 0,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 0,
+              "unitCode": "DAY"
+            }
+          },
+          "doesNotShip": true
+        }
+      }
+      {%- if product.featured_image -%}
+      ,"image": [
+        "https:{{ product.featured_image | image_url: width: 1200 }}"
+      ]
+      {%- endif -%}
+    }
+    {%- endif -%}
+    {%- if request.page_type == 'article' -%}
+    ,{
+      "@type": "BlogPosting",
+      "@id": "{{ shop.url }}/blogs/{{ blog.handle }}/{{ article.handle }}/#article",
+      "headline": {{ article.title | json }},
+      "description": {{ article.excerpt_or_content | strip_html | truncate: 200 | json }},
+      "url": "{{ shop.url }}/blogs/{{ blog.handle }}/{{ article.handle }}",
+      "datePublished": "{{ article.published_at | date: '%Y-%m-%d' }}",
+      "dateModified": "{{ article.updated_at | date: '%Y-%m-%d' }}",
+      "publisher": { "@id": "{{ shop.url }}/#organization" },
+      "author": { "@id": "{{ shop.url }}/#organization" },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ shop.url }}/blogs/{{ blog.handle }}/{{ article.handle }}"
+      }
+      {%- if article.image -%}
+      ,"image": "https:{{ article.image | image_url: width: 1200 }}"
+      {%- endif -%}
+    }
+    {%- endif -%}
+  ]
+}
+</script>
