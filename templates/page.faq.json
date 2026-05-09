@@ -41,7 +41,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Who are the guides for?",
-            "icon": "information",
+            "icon": "star",
             "row_content": "<p>The guides offer support and reassurance for personal experiences and challenges. Written specifically for women navigating real-life health and wellness situations, in plain language you can use straight away.</p>",
             "page": ""
           }
@@ -58,8 +58,8 @@
         "heading_size": "h1",
         "heading_alignment": "center",
         "layout": "none",
-        "color_scheme": "scheme-1",
         "container_color_scheme": "scheme-1",
+        "color_scheme": "scheme-1",
         "open_first_collapsible_row": true,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
