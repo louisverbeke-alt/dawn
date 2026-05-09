@@ -23,20 +23,11 @@
         "price": {
           "type": "price"
         },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button"
-          }
-        },
-        "quantity_selector": {
-          "type": "quantity_selector"
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
+            "show_gift_card_recipient": false
           }
         },
         "description": {
@@ -45,36 +36,36 @@
         "collapsible-row-0": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Materials",
-            "icon": "leather",
-            "content": "",
+            "heading": "What's Inside This Guide",
+            "icon": "clipboard",
+            "content": "Each guide contains practical, actionable content organised into easy-to-read sections. You'll find clear explanations, step-by-step advice, and summary points to help you put the information to use straight away.",
             "page": ""
           }
         },
         "collapsible-row-1": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Shipping & Returns",
-            "icon": "truck",
-            "content": "",
+            "heading": "Instant Download & Access",
+            "icon": "lightning_bolt",
+            "content": "After completing your purchase, you'll receive an email with your download link within minutes. Your PDF is yours to keep — save it to your device, print it, or read it on any screen.",
             "page": ""
           }
         },
         "collapsible-row-2": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Dimensions",
+            "heading": "File Format & Compatibility",
             "icon": "ruler",
-            "content": "",
+            "content": "All guides are delivered as PDF files, compatible with any device — phone, tablet, laptop, or desktop. You can open them with free apps like Adobe Acrobat Reader, Apple Books, or any standard PDF viewer.",
             "page": ""
           }
         },
         "collapsible-row-3": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Care Instructions",
-            "icon": "heart",
-            "content": "",
+            "heading": "Questions? We're Here",
+            "icon": "chat_bubble",
+            "content": "We're happy to help with any questions about your purchase or guide content. Reach us at guidecrafted@gmail.com and we'll respond within 1–2 business days.",
             "page": ""
           }
         },
@@ -90,8 +81,6 @@
         "title",
         "caption",
         "price",
-        "variant_picker",
-        "quantity_selector",
         "buy_buttons",
         "description",
         "collapsible-row-0",
@@ -115,24 +104,24 @@
     "image-with-text": {
       "type": "image-with-text",
       "blocks": {
-        "image-with-text-0": {
+        "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
+            "heading": "Practical Guidance for Real Life",
             "heading_size": "h1"
           }
         },
-        "image-with-text-1": {
+        "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>GuideCraft guides are written specifically for women navigating health and wellness challenges. Whether you're managing menopause, building a fitness routine, or looking for practical self-improvement strategies — our guides are designed to be genuinely useful, not just interesting to read.</p>",
             "text_style": "body"
           }
         }
       },
       "block_order": [
-        "image-with-text-0",
-        "image-with-text-1"
+        "heading",
+        "text"
       ],
       "settings": {
         "height": "small",
@@ -153,8 +142,8 @@
         "column-0": {
           "type": "column",
           "settings": {
-            "title": "Free Shipping",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "title": "Instant PDF Delivery",
+            "text": "<p>Your guide is ready to download the moment your payment clears. No waiting, no shipping delays.</p>",
             "link_label": "",
             "link": ""
           }
@@ -162,8 +151,8 @@
         "column-1": {
           "type": "column",
           "settings": {
-            "title": "Hassle-Free Exchanges",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "title": "Not Sure? Just Ask",
+            "text": "<p>Questions before you buy? Email us at guidecrafted@gmail.com — we're happy to help you find the right guide.</p>",
             "link_label": "",
             "link": ""
           }
@@ -193,7 +182,7 @@
     "related-products": {
       "type": "related-products",
       "settings": {
-        "heading": "You may also like",
+        "heading": "You May Also Like",
         "heading_size": "h2",
         "columns_desktop": 4,
         "color_scheme": "scheme-1",

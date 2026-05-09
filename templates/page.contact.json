@@ -4,14 +4,42 @@
       "type": "main-page",
       "settings": {
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 0
+      }
+    },
+    "support_info": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "We're Here to Help",
+            "heading_size": "h2"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Have a question about a guide or your order? Send us a message using the form below, or email us directly at <a href=\"mailto:guidecrafted@gmail.com\">guidecrafted@gmail.com</a>.</p><p>We typically respond within 1–2 business days. If your download link didn't arrive after purchase, please check your spam or junk folder first — then reach out and we'll sort it straight away.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "form": {
       "type": "contact-form",
       "settings": {
-        "heading": "",
-        "heading_size": "h1",
+        "heading": "Send Us a Message",
+        "heading_size": "h2",
         "color_scheme": "scheme-1",
         "padding_top": 36,
         "padding_bottom": 36
@@ -20,6 +48,7 @@
   },
   "order": [
     "main",
+    "support_info",
     "form"
   ]
 }
