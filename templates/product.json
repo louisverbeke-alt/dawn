@@ -60,7 +60,7 @@
         "collapsible-row-0": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "What's Inside This Guide",
+            "heading": "What's Inside every guide",
             "icon": "clipboard",
             "content": "<p>Each guide contains practical, actionable content organised into easy-to-read sections. You'll find clear explanations, step-by-step advice, and summary points to help you put the information to use straight away.</p>",
             "page": ""
