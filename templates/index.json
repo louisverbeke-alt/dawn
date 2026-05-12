@@ -243,32 +243,23 @@
     "177841584935266aeb": {
       "type": "apps",
       "blocks": {
-        "loox_reviews_loox_card_carousel_section_Chz9jy": {
-          "type": "shopify://apps/loox-reviews/blocks/loox-card-carousel-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+        "loox_reviews_loox_agg_section_PxDzWt": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-agg-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
-            "maxWidth": 1390,
-            "borderRadius": 8,
-            "itemsPerView": 4,
-            "mobileItemsPerView": 2,
-            "maxNumberOfCharacters": 100,
-            "imageRatio": "0.5625",
-            "reviewerNameColor": "#121212",
-            "textColor": "#121212",
-            "itemBackgroundColor": "#ffffff",
-            "starsColor": "",
-            "starsBackgroundColor": "#ffffff",
-            "arrows_backgroundColor": "#FFFFFF",
-            "arrows_iconColor": "#f4f6fa",
-            "shadow": "offset-dark",
-            "border_active": false,
-            "border_width": 2,
-            "border_color": "#9A9A9A",
-            "productIds": ""
+            "reviews_to_display": "product_reviews_only",
+            "default_tab": "automatic",
+            "only_photos": false,
+            "hide_thumbnails": false,
+            "product_handle": "the-menopause-strength-blueprint",
+            "aggregated": true,
+            "data-limit": 8,
+            "maxwidth": 1080,
+            "is_sample": true
           }
         }
       },
       "block_order": [
-        "loox_reviews_loox_card_carousel_section_Chz9jy"
+        "loox_reviews_loox_agg_section_PxDzWt"
       ],
       "settings": {
         "include_margins": true
