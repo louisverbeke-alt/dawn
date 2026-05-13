@@ -1,0 +1,78 @@
+{{ 'manuel-theme.css' | asset_url | stylesheet_tag }}
+
+<section class="mn mn-section mn-cta" id="contact" style="background: var(--mn-ink-deep);">
+  <div class="mn-wrap">
+    <div class="mn-cta__inner mn-reveal">
+
+      {%- comment -%} Decorative knife SVG — top right {%- endcomment -%}
+      <svg class="mn-cta__deco mn-cta__deco--1" viewBox="0 0 120 480" fill="none" aria-hidden="true">
+        <rect x="54" y="0" width="12" height="330" rx="6" fill="white"/>
+        <path d="M48 330 Q30 385 38 460 Q60 480 82 460 Q90 385 72 330Z" fill="white"/>
+        <rect x="44" y="326" width="32" height="14" rx="5" fill="white" opacity="0.5"/>
+      </svg>
+      <svg class="mn-cta__deco mn-cta__deco--2" viewBox="0 0 120 480" fill="none" aria-hidden="true">
+        <rect x="54" y="0" width="12" height="330" rx="6" fill="white"/>
+        <path d="M48 330 Q30 385 38 460 Q60 480 82 460 Q90 385 72 330Z" fill="white"/>
+        <rect x="44" y="326" width="32" height="14" rx="5" fill="white" opacity="0.5"/>
+      </svg>
+
+      <div class="mn-eyebrow" style="justify-content: center; margin-bottom: 20px;">
+        {{ section.settings.eyebrow | default: 'Bestellen · vragen · contact' }}
+      </div>
+      <h2 class="mn-h2 mn-reveal" style="--d: 80ms; max-width: 640px; margin: 0 auto;">
+        {{ section.settings.title | default: '<p>Klaar om te bestellen? <em>Bel of mail</em> ons.</p>' }}
+      </h2>
+      <p class="mn-lead mn-reveal" style="--d: 180ms; margin: 20px auto 0;">
+        {{ section.settings.lead | default: 'Voor grote bestellingen, BBQ-pakketten of feestbereidingen contacteert u ons het best op voorhand. Wij helpen u graag.' }}
+      </p>
+
+      <div class="mn-cta__btns mn-reveal" style="--d: 280ms;">
+        <a href="tel:{{ section.settings.phone_link | default: '+32XXXXXXXXX' }}" class="mn-btn">
+          {{ section.settings.cta_phone | default: 'Bel ons: [TEL INVULLEN]' }}
+          <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true">
+            <path d="M2 2C2 2 4 1 5 3L6.5 6C6.5 6 7 7 6 7.5C5 8 4.5 8.5 5 9.5C5.5 10.5 7 12 8 12.5C9 13 9.5 12.5 10 11.5C10.5 10.5 11.5 11 11.5 11L14 12.5C16 13.5 15 15.5 15 15.5C15 15.5 13 17 10 14C7 11 1 5 2 2Z" fill="currentColor"/>
+          </svg>
+        </a>
+        <a href="mailto:{{ section.settings.email | default: 'info@[DOMEIN].be' }}" class="mn-btn mn-btn--ghost">
+          {{ section.settings.cta_email | default: 'Mail ons' }}
+          <svg viewBox="0 0 16 12" fill="none" aria-hidden="true" width="16" height="12">
+            <rect x="1" y="1" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.3"/>
+            <path d="M1.5 2L8 7.5L14.5 2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+          </svg>
+        </a>
+        {%- if section.settings.whatsapp_link != blank -%}
+          <a href="{{ section.settings.whatsapp_link }}" target="_blank" rel="noopener" class="mn-btn mn-btn--ghost">
+            {{ section.settings.cta_whatsapp | default: 'WhatsApp' }}
+          </a>
+        {%- endif -%}
+      </div>
+
+      {%- if section.settings.note != blank -%}
+        <p class="mn-reveal" style="--d: 360ms; font-size: 12px; letter-spacing: 0.1em; color: rgba(240,230,214,0.35); margin-top: 24px; font-family: var(--mn-sans);">
+          {{ section.settings.note }}
+        </p>
+      {%- endif -%}
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Manuel · Contact CTA",
+  "tag": "section",
+  "settings": [
+    { "type": "text",     "id": "eyebrow",      "label": "Eyebrow",              "default": "Bestellen · vragen · contact" },
+    { "type": "richtext", "id": "title",        "label": "Titel",                "default": "<p>Klaar om te bestellen? <em>Bel of mail</em> ons.</p>" },
+    { "type": "textarea", "id": "lead",         "label": "Lead tekst" },
+    { "type": "text",     "id": "cta_phone",    "label": "Telefoon CTA tekst",   "default": "Bel ons: [TEL INVULLEN]" },
+    { "type": "text",     "id": "phone_link",   "label": "Telefoon link (tel:+32…)", "default": "+32XXXXXXXXX" },
+    { "type": "text",     "id": "cta_email",    "label": "Mail CTA tekst",       "default": "Mail ons" },
+    { "type": "text",     "id": "email",        "label": "E-mailadres",          "default": "info@[DOMEIN].be" },
+    { "type": "text",     "id": "cta_whatsapp", "label": "WhatsApp CTA tekst",   "default": "WhatsApp" },
+    { "type": "url",      "id": "whatsapp_link","label": "WhatsApp link (optioneel)" },
+    { "type": "text",     "id": "note",         "label": "Kleine notitie onderaan" }
+  ],
+  "presets": [{ "name": "Manuel · Contact CTA" }]
+}
+{% endschema %}

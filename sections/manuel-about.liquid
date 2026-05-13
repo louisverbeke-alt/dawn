@@ -1,0 +1,94 @@
+{{ 'manuel-theme.css' | asset_url | stylesheet_tag }}
+
+<section class="mn mn-light mn-about mn-section" id="over-ons">
+  <div class="mn-wrap">
+    <div class="mn-about__grid">
+
+      {%- comment -%} Visual panel — placeholder for real photo of Manuel & Anoeshka {%- endcomment -%}
+      <div class="mn-about__visual mn-reveal mn-reveal--zoom" style="--d: 0ms;">
+        <svg class="bg" viewBox="0 0 600 780" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <linearGradient id="mnAboutBg" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0" stop-color="#3a2018"/>
+              <stop offset="1" stop-color="#1a0e0b"/>
+            </linearGradient>
+            <radialGradient id="mnAboutLight" cx="0.65" cy="0.35" r="0.65">
+              <stop offset="0" stop-color="#b8892a" stop-opacity="0.4"/>
+              <stop offset="1" stop-color="#b8892a" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <rect width="600" height="780" fill="url(#mnAboutBg)"/>
+          <rect width="600" height="780" fill="url(#mnAboutLight)"/>
+
+          <!-- Abstract butcher chart silhouette -->
+          <g stroke="#b8892a" stroke-width="0.6" fill="none" opacity="0.22">
+            <!-- Cow outline, simplified -->
+            <ellipse cx="300" cy="390" rx="180" ry="140"/>
+            <ellipse cx="300" cy="390" rx="120" ry="90"/>
+            <!-- Cut lines -->
+            <line x1="120" y1="390" x2="480" y2="390"/>
+            <line x1="200" y1="250" x2="200" y2="530"/>
+            <line x1="300" y1="250" x2="300" y2="530"/>
+            <line x1="400" y1="250" x2="400" y2="530"/>
+            <!-- Labels placeholder dots -->
+            <circle cx="160" cy="320" r="3" fill="#b8892a" opacity="0.5"/>
+            <circle cx="250" cy="310" r="3" fill="#b8892a" opacity="0.5"/>
+            <circle cx="350" cy="310" r="3" fill="#b8892a" opacity="0.5"/>
+            <circle cx="440" cy="330" r="3" fill="#b8892a" opacity="0.5"/>
+            <circle cx="200" cy="450" r="3" fill="#b8892a" opacity="0.5"/>
+            <circle cx="350" cy="460" r="3" fill="#b8892a" opacity="0.5"/>
+          </g>
+
+          <!-- Warm bloom center -->
+          <ellipse cx="300" cy="300" rx="180" ry="150" fill="#b8892a" opacity="0.07"/>
+
+          <!-- Photo placeholder text -->
+          <text x="300" y="660" text-anchor="middle" font-family="'Inter Tight', sans-serif" font-size="10" letter-spacing="3" text-transform="uppercase" fill="#b8892a" opacity="0.35">FOTO MANUEL &amp; ANOESHKA</text>
+          <text x="300" y="676" text-anchor="middle" font-family="'Inter Tight', sans-serif" font-size="9" letter-spacing="2" fill="#b8892a" opacity="0.25">[ HIER EEN ECHTE FOTO TOEVOEGEN ]</text>
+        </svg>
+        <div class="plate">
+          <span>{{ section.settings.plate_label | default: '— Vakambacht' }}</span>
+          <em>{{ section.settings.plate_em | default: 'Uw keurslager' }}</em>
+        </div>
+      </div>
+
+      {%- comment -%} Text content {%- endcomment -%}
+      <div>
+        <div class="mn-about__chapter mn-reveal" style="--d: 0ms;">
+          {{ section.settings.chapter | default: 'Hoofdstuk I — wie zijn wij' }}
+        </div>
+        <h2 class="mn-h2 mn-reveal" style="--d: 80ms;">
+          {{ section.settings.title | default: '<p>Twee handen, één passie — <em>het vakmanschap</em>.</p>' }}
+        </h2>
+        <div class="mn-about__copy mn-reveal" style="--d: 200ms;">
+          <p>{{ section.settings.body_1 | default: 'Manuel en Anoeshka zijn meer dan uw slager — ze zijn ambachtslui die dag na dag bezig zijn met één ding: het allerbeste vlees voor u op de toonbank leggen. Manuel staat al meer dan twee decennia met de handen in het vlees, Anoeshka verwelkomt u in de winkel met het warme gezicht van de zaak.' }}</p>
+          <p>{{ section.settings.body_2 | default: 'Elk stuk vlees dat u bij ons koopt, is geselecteerd op herkomst, vetmarbling en rijping. Wij werken uitsluitend met Belgische en gecontroleerde Europese leveranciers. Onze bereide producten — marinardes, gehakt, worstjes, pâtés — worden hier op locatie gemaakt, elke ochtend vers.' }}</p>
+        </div>
+        <div class="mn-about__sig mn-reveal" style="--d: 320ms;">
+          <svg viewBox="0 0 200 60" fill="none" aria-hidden="true">
+            <path d="M5 42C22 20 36 40 48 26C62 10 74 42 88 30C104 16 116 44 132 32C148 20 164 40 178 28C188 22 194 32 197 30" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          </svg>
+          {{ section.settings.signature | default: 'Manuel &amp; Anoeshka — keurslager' }}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Manuel · Over ons",
+  "tag": "section",
+  "settings": [
+    { "type": "text",     "id": "chapter",    "label": "Hoofdstuk label",  "default": "Hoofdstuk I — wie zijn wij" },
+    { "type": "richtext", "id": "title",      "label": "Titel",            "default": "<p>Twee handen, één passie — <em>het vakmanschap</em>.</p>" },
+    { "type": "textarea", "id": "body_1",     "label": "Paragraaf 1" },
+    { "type": "textarea", "id": "body_2",     "label": "Paragraaf 2" },
+    { "type": "text",     "id": "signature",  "label": "Handtekening",     "default": "Manuel & Anoeshka — keurslager" },
+    { "type": "text",     "id": "plate_label","label": "Visual caption links" },
+    { "type": "text",     "id": "plate_em",   "label": "Visual caption rechts (cursief)" }
+  ],
+  "presets": [{ "name": "Manuel · Over ons" }]
+}
+{% endschema %}

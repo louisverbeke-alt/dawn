@@ -1,0 +1,135 @@
+{{ 'manuel-theme.css' | asset_url | stylesheet_tag }}
+{{ 'manuel-motion.js' | asset_url | script_tag }}
+
+<section class="mn mn-overture" aria-label="{{ section.settings.title_italic | default: 'Keurslager Manuel en Anoeshka' }} — hero">
+
+  {%- comment -%} Decorative background {%- endcomment -%}
+  <div class="mn-overture__bg" aria-hidden="true">
+    <svg viewBox="0 0 1400 900" preserveAspectRatio="xMidYMid slice" fill="none">
+      <defs>
+        <radialGradient id="mnHeroBg" cx="0.5" cy="0.4" r="0.8">
+          <stop offset="0" stop-color="#3a2018"/>
+          <stop offset="1" stop-color="#0f0806"/>
+        </radialGradient>
+      </defs>
+      <rect width="1400" height="900" fill="url(#mnHeroBg)"/>
+
+      <!-- Grain / texture circles -->
+      <g stroke="#b8892a" stroke-width="0.5" opacity="0.35" fill="none">
+        <circle cx="700" cy="450" r="320"/>
+        <circle cx="700" cy="450" r="420"/>
+        <circle cx="700" cy="450" r="520"/>
+      </g>
+
+      <!-- Decorative lines — like butcher chart marks -->
+      <g stroke="#b8892a" stroke-width="0.4" opacity="0.18">
+        <line x1="0" y1="200" x2="1400" y2="180"/>
+        <line x1="0" y1="700" x2="1400" y2="720"/>
+        <line x1="340" y1="0" x2="300" y2="900"/>
+        <line x1="1060" y1="0" x2="1100" y2="900"/>
+      </g>
+
+      <!-- Subtle top-right light bloom -->
+      <ellipse cx="1100" cy="120" rx="280" ry="200" fill="#b8892a" opacity="0.06"/>
+      <!-- Bottom-left dark -->
+      <ellipse cx="200" cy="780" rx="220" ry="180" fill="#7a2e2e" opacity="0.08"/>
+    </svg>
+
+    {%- comment -%} Floating knife glyphs {%- endcomment -%}
+    <svg class="mn-knife mn-knife--1" viewBox="0 0 40 160" fill="none" aria-hidden="true">
+      <rect x="17" y="0" width="6" height="110" rx="3" fill="currentColor"/>
+      <path d="M17 110 Q10 130 14 155 Q20 160 26 155 Q30 130 23 110Z" fill="currentColor"/>
+      <rect x="14" y="108" width="12" height="6" rx="2" fill="currentColor" opacity="0.5"/>
+    </svg>
+    <svg class="mn-knife mn-knife--2" viewBox="0 0 32 130" fill="none" aria-hidden="true">
+      <rect x="13" y="0" width="6" height="90" rx="2.5" fill="currentColor"/>
+      <path d="M13 90 Q7 108 11 124 Q16 130 21 124 Q25 108 19 90Z" fill="currentColor"/>
+      <rect x="11" y="88" width="10" height="5" rx="1.5" fill="currentColor" opacity="0.45"/>
+    </svg>
+    <svg class="mn-knife mn-knife--3" viewBox="0 0 28 110" fill="none" aria-hidden="true">
+      <rect x="11" y="0" width="6" height="78" rx="2" fill="currentColor"/>
+      <path d="M11 78 Q6 94 9 106 Q14 110 19 106 Q22 94 17 78Z" fill="currentColor"/>
+    </svg>
+  </div>
+
+  <header class="mn-overture__top">
+    <span>
+      <span class="dot"></span>
+      {{ section.settings.status_label | default: 'Open · kwaliteitsvlees van ambacht' }}
+    </span>
+    <span>{{ section.settings.location_label | default: '[ADRES INVULLEN] · België' }}</span>
+  </header>
+
+  <div class="mn-overture__center">
+    <div class="mn-eyebrow mn-reveal" style="--d: 60ms;">
+      {{ section.settings.eyebrow | default: 'Keurslager · Familiezaak' }}
+    </div>
+    <h1 class="mn-overture__title mn-letters" data-mn-letters>
+      {{ section.settings.title_italic | default: 'Manuel & Anoeshka' }}
+    </h1>
+    {%- if section.settings.title_sub != blank -%}
+      <div class="mn-overture__name mn-reveal" style="--d: 580ms;">
+        {{ section.settings.title_sub }}
+      </div>
+    {%- endif -%}
+    <p class="mn-overture__sub mn-reveal" style="--d: 680ms;">
+      {{ section.settings.tagline | default: 'Kwaliteitsvlees met karakter — bereid door vakbekwame handen. Wij selecteren, rijpen en verwerken alles in eigen atelier voor een smaak die u nergens anders vindt.' }}
+    </p>
+    <div class="mn-overture__ctas mn-reveal" style="--d: 820ms;">
+      <a href="{{ section.settings.primary_link | default: '#producten' }}" class="mn-btn">
+        {{ section.settings.primary_label | default: 'Bekijk ons aanbod' }}
+        <svg class="arrow" viewBox="0 0 16 12" fill="none" aria-hidden="true">
+          <path d="M1 6h13m0 0L9 1m5 5l-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+      </a>
+      <a href="{{ section.settings.secondary_link | default: '#contact' }}" class="mn-btn mn-btn--ghost">
+        {{ section.settings.secondary_label | default: 'Contacteer ons' }}
+      </a>
+    </div>
+  </div>
+
+  <div class="mn-overture__bottom mn-stagger">
+    <div>
+      <small>Erkenning</small>
+      <strong>Erkend Keurslager</strong>
+    </div>
+    <div>
+      <small>Atelier</small>
+      <strong>Eigen bereiding</strong>
+    </div>
+    <div>
+      <small>Specialiteit</small>
+      <strong>BBQ · charcuterie</strong>
+    </div>
+    <div>
+      <small>Telefoon</small>
+      <strong>
+        <a href="tel:{{ section.settings.phone_link | default: '+32XXXXXXXXX' }}" style="color: inherit; text-decoration: none;">
+          {{ section.settings.phone | default: '[TEL INVULLEN]' }}
+        </a>
+      </strong>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Manuel · Overture",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "status_label",   "label": "Top status",         "default": "Open · kwaliteitsvlees van ambacht" },
+    { "type": "text", "id": "location_label", "label": "Top locatie",         "default": "[ADRES INVULLEN] · België" },
+    { "type": "text", "id": "eyebrow",        "label": "Eyebrow",             "default": "Keurslager · Familiezaak" },
+    { "type": "text", "id": "title_italic",   "label": "Display naam",        "default": "Manuel & Anoeshka" },
+    { "type": "text", "id": "title_sub",      "label": "Subtitel",            "default": "Keurslager · Uw vakslager van vertrouwen" },
+    { "type": "textarea", "id": "tagline",    "label": "Tagline",             "default": "Kwaliteitsvlees met karakter — bereid door vakbekwame handen. Wij selecteren, rijpen en verwerken alles in eigen atelier voor een smaak die u nergens anders vindt." },
+    { "type": "text", "id": "primary_label",  "label": "CTA 1 tekst",         "default": "Bekijk ons aanbod" },
+    { "type": "url",  "id": "primary_link",   "label": "CTA 1 link" },
+    { "type": "text", "id": "secondary_label","label": "CTA 2 tekst",         "default": "Contacteer ons" },
+    { "type": "url",  "id": "secondary_link", "label": "CTA 2 link" },
+    { "type": "text", "id": "phone",          "label": "Tel. weergave",       "default": "[TEL INVULLEN]" },
+    { "type": "text", "id": "phone_link",     "label": "Tel. link (tel:+32…)", "default": "+32XXXXXXXXX" }
+  ],
+  "presets": [{ "name": "Manuel · Overture" }]
+}
+{% endschema %}

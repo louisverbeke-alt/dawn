@@ -1,0 +1,157 @@
+{{ 'manuel-theme.css' | asset_url | stylesheet_tag }}
+
+<section class="mn mn-light mn-visit mn-section" id="openingsuren">
+  <div class="mn-wrap">
+    <div class="mn-visit__grid">
+
+      {%- comment -%} Links: uren + adres {%- endcomment -%}
+      <div>
+        <div class="mn-eyebrow mn-reveal" style="--d: 0ms;">
+          {{ section.settings.eyebrow | default: 'Bezoek ons' }}
+        </div>
+        <h2 class="mn-h2 mn-reveal" style="--d: 80ms; margin-top: 18px;">
+          {{ section.settings.title | default: '<p>Welkom in onze <em>slagerij</em>.</p>' }}
+        </h2>
+        <p class="mn-lead mn-reveal" style="--d: 160ms; margin-top: 18px;">
+          {{ section.settings.lead | default: 'U vindt ons in het hart van de buurt — met een ruime parking voor de deur. Kom langs voor vers advies, proef de dagbereiding, of bestel vooraf.' }}
+        </p>
+
+        <div class="mn-visit__cols mn-stagger" style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 36px;">
+          <div>
+            <div class="mn-visit__contact">
+              <h4>Openingsuren</h4>
+            </div>
+            <ul class="mn-visit__hours">
+              {%- for block in section.blocks -%}
+                {%- if block.type == 'hour' -%}
+                  <li class="{% if block.settings.closed %}closed{% endif %}">
+                    <span>{{ block.settings.day }}</span>
+                    <span>{{ block.settings.hours }}</span>
+                  </li>
+                {%- endif -%}
+              {%- endfor -%}
+            </ul>
+          </div>
+
+          <div class="mn-visit__contact">
+            <h4>Adres &amp; contact</h4>
+            <address>
+              <strong style="display:block; font-style:normal; color: var(--mn-mahogany); font-size:14px; margin-bottom:6px;">
+                {{ section.settings.shop_name | default: 'Keurslager Manuel en Anoeshka' }}
+              </strong>
+              {{ section.settings.address | default: '[STRAAT EN NUMMER]<br>[POSTCODE GEMEENTE]<br>België' }}<br><br>
+              <a href="tel:{{ section.settings.phone_link | default: '+32XXXXXXXXX' }}">
+                {{ section.settings.phone | default: '[TEL INVULLEN]' }}
+              </a><br>
+              <a href="mailto:{{ section.settings.email | default: 'info@[DOMEIN].be' }}">
+                {{ section.settings.email | default: 'info@[DOMEIN].be' }}
+              </a>
+            </address>
+
+            <div style="margin-top: 24px; display:flex; flex-direction:column; gap: 10px;">
+              <a href="{{ section.settings.directions_link | default: '#' }}" target="_blank" rel="noopener" class="mn-btn" style="font-size:11px; padding:14px 20px;">
+                Routebeschrijving
+                <svg class="arrow" viewBox="0 0 16 12" fill="none" aria-hidden="true">
+                  <path d="M1 6h13m0 0L9 1m5 5l-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+                </svg>
+              </a>
+              <a href="#contact" class="mn-btn mn-btn--ghost" style="font-size:11px; padding:14px 20px;">
+                Contacteer ons
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {%- comment -%} Rechts: gestileerde kaart {%- endcomment -%}
+      <div class="mn-visit__map mn-reveal" style="--d: 80ms;">
+        <svg class="bg" viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <linearGradient id="mnMapBg" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#2c1810"/>
+              <stop offset="1" stop-color="#1a0e0b"/>
+            </linearGradient>
+          </defs>
+          <rect width="600" height="600" fill="url(#mnMapBg)"/>
+
+          <!-- Street grid -->
+          <g stroke="#b8892a" stroke-width="0.6" opacity="0.28">
+            <path d="M0 130L600 110"/>
+            <path d="M0 240L600 230"/>
+            <path d="M0 370L600 360"/>
+            <path d="M0 490L600 480"/>
+            <path d="M110 0L90 600"/>
+            <path d="M270 0L255 600"/>
+            <path d="M400 0L385 600"/>
+            <path d="M530 0L545 600"/>
+          </g>
+
+          <!-- Park / water blobs -->
+          <path d="M390 340C430 355 460 385 445 445C430 500 390 520 330 510C310 455 325 380 390 340Z" fill="#2c1810" stroke="#b8892a" stroke-width="0.7" opacity="0.6"/>
+          <path d="M50 70C90 55 125 78 120 120C115 158 75 168 48 150C36 118 30 88 50 70Z" fill="#2c1810" stroke="#b8892a" stroke-width="0.7" opacity="0.6"/>
+
+          <!-- Highlighted street -->
+          <path d="M110 300L390 290" stroke="#b8892a" stroke-width="2.2" opacity="0.9"/>
+        </svg>
+
+        <div class="pin"><div class="dot"></div></div>
+        <div class="label">
+          <div>
+            <strong>{{ section.settings.shop_name | default: 'Keurslager Manuel en Anoeshka' }}</strong>
+            <small>{{ section.settings.address_short | default: '[ADRES] · [GEMEENTE]' }}</small>
+          </div>
+          <a href="{{ section.settings.directions_link | default: '#' }}" target="_blank" rel="noopener"
+             style="font-size:10px; letter-spacing:0.22em; text-transform:uppercase; color:var(--mn-gold); text-decoration:none; white-space:nowrap;">
+            Open in maps →
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Manuel · Openingsuren",
+  "tag": "section",
+  "max_blocks": 7,
+  "settings": [
+    { "type": "text",     "id": "eyebrow",       "label": "Eyebrow",                   "default": "Bezoek ons" },
+    { "type": "richtext", "id": "title",         "label": "Titel",                     "default": "<p>Welkom in onze <em>slagerij</em>.</p>" },
+    { "type": "textarea", "id": "lead",          "label": "Lead tekst" },
+    { "type": "text",     "id": "shop_name",     "label": "Winkelnaam",                "default": "Keurslager Manuel en Anoeshka" },
+    { "type": "html",     "id": "address",       "label": "Adres (HTML toegelaten)",   "default": "[STRAAT EN NUMMER]<br>[POSTCODE GEMEENTE]<br>België" },
+    { "type": "text",     "id": "address_short", "label": "Adres (kort, voor kaart label)", "default": "[ADRES] · [GEMEENTE]" },
+    { "type": "text",     "id": "phone",         "label": "Telefoon weergave",         "default": "[TEL INVULLEN]" },
+    { "type": "text",     "id": "phone_link",    "label": "Telefoon link (tel:+32…)",  "default": "+32XXXXXXXXX" },
+    { "type": "text",     "id": "email",         "label": "E-mail",                    "default": "info@[DOMEIN].be" },
+    { "type": "url",      "id": "directions_link","label": "Google Maps URL" }
+  ],
+  "blocks": [
+    {
+      "type": "hour",
+      "name": "Openingsuren rij",
+      "settings": [
+        { "type": "text",     "id": "day",    "label": "Dag",              "default": "Maandag" },
+        { "type": "text",     "id": "hours",  "label": "Uren",             "default": "8u30 — 18u00" },
+        { "type": "checkbox", "id": "closed", "label": "Toon als gesloten" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Manuel · Openingsuren",
+      "blocks": [
+        { "type": "hour", "settings": { "day": "Maandag",   "hours": "8u30 — 18u00" } },
+        { "type": "hour", "settings": { "day": "Dinsdag",   "hours": "Gesloten", "closed": true } },
+        { "type": "hour", "settings": { "day": "Woensdag",  "hours": "8u30 — 18u00" } },
+        { "type": "hour", "settings": { "day": "Donderdag", "hours": "8u30 — 18u00" } },
+        { "type": "hour", "settings": { "day": "Vrijdag",   "hours": "8u30 — 18u30" } },
+        { "type": "hour", "settings": { "day": "Zaterdag",  "hours": "7u30 — 17u00" } },
+        { "type": "hour", "settings": { "day": "Zondag",    "hours": "8u00 — 12u30" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

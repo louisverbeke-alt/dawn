@@ -1,0 +1,174 @@
+{{ 'manuel-theme.css' | asset_url | stylesheet_tag }}
+
+<section class="mn mn-warm mn-section" id="producten">
+  <div class="mn-wrap">
+
+    <div class="mn-products__head mn-reveal">
+      <div class="mn-eyebrow" style="justify-content: center; margin-bottom: 20px;">
+        {{ section.settings.eyebrow | default: 'Ons aanbod' }}
+      </div>
+      <h2 class="mn-h2" style="color: var(--mn-linen); text-align: center; max-width: 640px; margin: 0 auto;">
+        {{ section.settings.title | default: '<p>Alles van het <em>vak</em> — vers van de hand.</p>' }}
+      </h2>
+      {%- if section.settings.lead != blank -%}
+        <p class="mn-lead" style="text-align: center; margin: 18px auto 0; max-width: 54ch;">
+          {{ section.settings.lead }}
+        </p>
+      {%- endif -%}
+    </div>
+
+    <div class="mn-products__grid mn-stagger">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'product' -%}
+          <div class="mn-product-card{% if block.settings.featured %} mn-product-card--featured{% endif %}">
+            {%- comment -%} Glyph icon — knife, fire, leaf, tag etc. {%- endcomment -%}
+            <svg class="mn-product-card__glyph" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+              {%- case block.settings.glyph -%}
+                {%- when 'knife' -%}
+                  <rect x="18" y="2" width="4" height="28" rx="2" fill="currentColor"/>
+                  <path d="M16 30 Q11 36 14 38.5 Q20 40 26 38.5 Q29 36 24 30Z" fill="currentColor"/>
+                  <rect x="14" y="28" width="12" height="4" rx="1.5" fill="currentColor" opacity="0.5"/>
+                {%- when 'fire' -%}
+                  <path d="M20 4C20 4 26 12 26 18C26 22 23 25 20 25C17 25 14 22 14 18C14 15 16 12 16 12C16 12 14 20 20 20C23 20 23 16 22 14C21 12 20 4 20 4Z" fill="currentColor"/>
+                  <path d="M18 22C18 22 14 24 14 28C14 31 17 33 20 33C23 33 26 31 26 28C26 24 22 22 22 22" stroke="currentColor" stroke-width="1.2" fill="none"/>
+                {%- when 'leaf' -%}
+                  <path d="M20 6C12 14 10 24 14 32C18 30 26 24 28 16C26 11 23 8 20 6Z" fill="currentColor"/>
+                  <path d="M19 10C17 18 16 24 14 32" stroke="currentColor" stroke-width="0.9" opacity="0.5"/>
+                {%- when 'star' -%}
+                  <path d="M20 5L22.5 15H33L24.5 21L27 31L20 25L13 31L15.5 21L7 15H17.5Z" fill="currentColor" opacity="0.9"/>
+                {%- when 'pig' -%}
+                  <ellipse cx="20" cy="22" rx="11" ry="9" fill="currentColor" opacity="0.85"/>
+                  <ellipse cx="20" cy="16" rx="7" ry="6" fill="currentColor"/>
+                  <circle cx="18" cy="15" r="1.5" fill="var(--mn-mahogany-2)"/>
+                  <circle cx="22" cy="15" r="1.5" fill="var(--mn-mahogany-2)"/>
+                  <path d="M16 28C16 28 18 31 20 31C22 31 24 28 24 28" stroke="var(--mn-mahogany-2)" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+                {%- when 'cow' -%}
+                  <ellipse cx="20" cy="22" rx="12" ry="9" fill="currentColor" opacity="0.85"/>
+                  <ellipse cx="20" cy="14" rx="8" ry="6" fill="currentColor"/>
+                  <path d="M14 8L12 4M26 8L28 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <circle cx="18" cy="13" r="1.5" fill="var(--mn-mahogany-2)"/>
+                  <circle cx="22" cy="13" r="1.5" fill="var(--mn-mahogany-2)"/>
+                {%- when 'bbq' -%}
+                  <circle cx="20" cy="22" r="12" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                  <line x1="8" y1="22" x2="32" y2="22" stroke="currentColor" stroke-width="1.2"/>
+                  <path d="M16 34L14 39M24 34L26 39" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M16 10C16 10 18 5 20 5C22 5 24 8 22 10" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+                {%- else -%}
+                  <circle cx="20" cy="20" r="12" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                  <circle cx="20" cy="20" r="4" fill="currentColor"/>
+              {%- endcase -%}
+            </svg>
+
+            <span class="mn-product-card__tag">{{ block.settings.tag | default: 'Specialiteit' }}</span>
+            <h3 class="mn-product-card__name">{{ block.settings.name | default: '<em>Verse bereiding</em>' }}</h3>
+            <p class="mn-product-card__desc">{{ block.settings.desc | default: 'Dagvers bereid in ons eigen atelier — met zorg voor kwaliteit en smaak.' }}</p>
+            <div class="mn-product-card__accent"></div>
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Manuel · Producten",
+  "tag": "section",
+  "max_blocks": 9,
+  "settings": [
+    { "type": "text",     "id": "eyebrow", "label": "Eyebrow",  "default": "Ons aanbod" },
+    { "type": "richtext", "id": "title",   "label": "Titel",    "default": "<p>Alles van het <em>vak</em> — vers van de hand.</p>" },
+    { "type": "textarea", "id": "lead",    "label": "Lead tekst" }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product / specialiteit",
+      "settings": [
+        {
+          "type": "select",
+          "id": "glyph",
+          "label": "Icoon",
+          "options": [
+            { "value": "knife",  "label": "Mes" },
+            { "value": "fire",   "label": "Vuur / BBQ" },
+            { "value": "leaf",   "label": "Blad / natuur" },
+            { "value": "star",   "label": "Ster / premium" },
+            { "value": "pig",    "label": "Varken" },
+            { "value": "cow",    "label": "Rund" },
+            { "value": "bbq",    "label": "BBQ ketel" }
+          ],
+          "default": "knife"
+        },
+        { "type": "text",     "id": "tag",      "label": "Categorie tag",  "default": "Specialiteit" },
+        { "type": "text",     "id": "name",     "label": "Naam",           "default": "Verse bereiding" },
+        { "type": "textarea", "id": "desc",     "label": "Beschrijving" },
+        { "type": "checkbox", "id": "featured", "label": "Uitgelicht (groter)",    "default": false }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Manuel · Producten",
+      "blocks": [
+        {
+          "type": "product",
+          "settings": {
+            "glyph": "cow",
+            "tag": "Rundsvlees",
+            "name": "Côte à l'os & entrecôte",
+            "desc": "Drooggerijpt Belgisch rund, geselecteerd op marbling. Onze slager snijdt op maat — voor de pan of de BBQ.",
+            "featured": true
+          }
+        },
+        {
+          "type": "product",
+          "settings": {
+            "glyph": "pig",
+            "tag": "Varkensvlees",
+            "name": "Pulled pork & karbonades",
+            "desc": "Vrije uitloopvarkens uit de streek. Van filet tot schouder — vers of gemarineerd."
+          }
+        },
+        {
+          "type": "product",
+          "settings": {
+            "glyph": "knife",
+            "tag": "Charcuterie",
+            "name": "Huisgemaakte pâtés & terrines",
+            "desc": "Bereid in ons eigen atelier. Leverpaté, wildpaté, coppa en salami — naar oud recept."
+          }
+        },
+        {
+          "type": "product",
+          "settings": {
+            "glyph": "bbq",
+            "tag": "BBQ-pakketten",
+            "name": "BBQ-pakket op maat",
+            "desc": "Samengesteld voor uw gezelschap: van 2 tot 50 personen. Gemarineerd, klaar voor het rooster — u bestelt, wij bereiden."
+          }
+        },
+        {
+          "type": "product",
+          "settings": {
+            "glyph": "fire",
+            "tag": "Bereide maaltijden",
+            "name": "Stoemp, vol-au-vent & stoofvlees",
+            "desc": "Dagverse bereide gerechten — klaar om thuis op te warmen. Gemak zonder compromis op smaak."
+          }
+        },
+        {
+          "type": "product",
+          "settings": {
+            "glyph": "leaf",
+            "tag": "Gevogelte & lam",
+            "name": "Kip, lam & wildselectie",
+            "desc": "Seizoensgebonden aanbod — van vrije-uitloopkip tot lamsbout en seizoenswild naar beschikbaarheid."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,204 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "mn_overture": {
+      "type": "manuel-overture",
+      "settings": {
+        "status_label": "Open · kwaliteitsvlees van ambacht",
+        "location_label": "[ADRES INVULLEN] · België",
+        "eyebrow": "Keurslager · Familiezaak",
+        "title_italic": "Manuel & Anoeshka",
+        "title_sub": "Keurslager · Uw vakslager van vertrouwen",
+        "tagline": "Kwaliteitsvlees met karakter — bereid door vakbekwame handen. Wij selecteren, rijpen en verwerken alles in eigen atelier voor een smaak die u nergens anders vindt.",
+        "primary_label": "Bekijk ons aanbod",
+        "primary_link": "#producten",
+        "secondary_label": "Contacteer ons",
+        "secondary_link": "#contact",
+        "phone": "[TEL INVULLEN]",
+        "phone_link": "+32XXXXXXXXX"
+      }
+    },
+    "mn_about": {
+      "type": "manuel-about",
+      "settings": {
+        "chapter": "Hoofdstuk I — wie zijn wij",
+        "title": "<p>Twee handen, één passie — <em>het vakmanschap</em>.</p>",
+        "body_1": "Manuel en Anoeshka zijn meer dan uw slager — ze zijn ambachtslui die dag na dag bezig zijn met één ding: het allerbeste vlees voor u op de toonbank leggen. Manuel staat al meer dan twee decennia met de handen in het vlees, Anoeshka verwelkomt u in de winkel met het warme gezicht van de zaak.",
+        "body_2": "Elk stuk vlees dat u bij ons koopt, is geselecteerd op herkomst, vetmarbling en rijping. Wij werken uitsluitend met Belgische en gecontroleerde Europese leveranciers. Onze bereide producten — marinardes, gehakt, worstjes, pâtés — worden hier op locatie gemaakt, elke ochtend vers.",
+        "signature": "Manuel & Anoeshka — keurslager",
+        "plate_label": "— Eigen atelier",
+        "plate_em": "Vers bereid, elke dag"
+      }
+    },
+    "mn_products": {
+      "type": "manuel-products",
+      "blocks": {
+        "p1": {
+          "type": "product",
+          "settings": {
+            "glyph": "cow",
+            "tag": "Rundsvlees",
+            "name": "Côte à l'os & entrecôte",
+            "desc": "Drooggerijpt Belgisch rund, geselecteerd op marbling. Onze slager snijdt op maat — voor de pan of de BBQ.",
+            "featured": true
+          }
+        },
+        "p2": {
+          "type": "product",
+          "settings": {
+            "glyph": "pig",
+            "tag": "Varkensvlees",
+            "name": "Pulled pork & karbonades",
+            "desc": "Vrije uitloopvarkens uit de streek. Van filet tot schouder — vers of gemarineerd.",
+            "featured": false
+          }
+        },
+        "p3": {
+          "type": "product",
+          "settings": {
+            "glyph": "knife",
+            "tag": "Charcuterie",
+            "name": "Huisgemaakte pâtés & terrines",
+            "desc": "Bereid in ons eigen atelier. Leverpaté, wildpaté, coppa en salami — naar oud recept.",
+            "featured": false
+          }
+        },
+        "p4": {
+          "type": "product",
+          "settings": {
+            "glyph": "bbq",
+            "tag": "BBQ-pakketten",
+            "name": "BBQ-pakket op maat",
+            "desc": "Samengesteld voor uw gezelschap: van 2 tot 50 personen. Gemarineerd, klaar voor het rooster — u bestelt, wij bereiden.",
+            "featured": false
+          }
+        },
+        "p5": {
+          "type": "product",
+          "settings": {
+            "glyph": "fire",
+            "tag": "Bereide maaltijden",
+            "name": "Stoemp, vol-au-vent & stoofvlees",
+            "desc": "Dagverse bereide gerechten — klaar om thuis op te warmen. Gemak zonder compromis op smaak.",
+            "featured": false
+          }
+        },
+        "p6": {
+          "type": "product",
+          "settings": {
+            "glyph": "leaf",
+            "tag": "Gevogelte & lam",
+            "name": "Kip, lam & wildselectie",
+            "desc": "Seizoensgebonden aanbod — van vrije-uitloopkip tot lamsbout en seizoenswild naar beschikbaarheid.",
+            "featured": false
+          }
+        }
+      },
+      "block_order": ["p1", "p2", "p3", "p4", "p5", "p6"],
+      "settings": {
+        "eyebrow": "Ons aanbod",
+        "title": "<p>Alles van het <em>vak</em> — vers van de hand.</p>",
+        "lead": "Van drooggerijpt rund tot huisgemaakte charcuterie — alles bereid in eigen atelier, elke dag vers."
+      }
+    },
+    "mn_seasonal": {
+      "type": "manuel-seasonal",
+      "blocks": {
+        "s1": { "type": "item", "settings": { "name": "Fazant op het been",          "sub": "Seizoenswild · oktober — januari",  "price": "vraag prijs" } },
+        "s2": { "type": "item", "settings": { "name": "Wildzwijngebraad",            "sub": "Seizoenswild · gerijpt",            "price": "vraag prijs" } },
+        "s3": { "type": "item", "settings": { "name": "BBQ-pakket Zomer",            "sub": "voor 4 personen · gemarineerd",     "price": "vanaf 48€" } },
+        "s4": { "type": "item", "settings": { "name": "Lamsrug",                     "sub": "Voorjaarslam · Belgisch",           "price": "dagprijs" } },
+        "s5": { "type": "item", "settings": { "name": "Stoofvlees met Duvel",        "sub": "Bereide maaltijd · vers per dag",   "price": "€/kg" } },
+        "s6": { "type": "item", "settings": { "name": "Kerstkalkoen op bestelling",  "sub": "Reserveer tijdig · december",       "price": "op bestelling" } }
+      },
+      "block_order": ["s1", "s2", "s3", "s4", "s5", "s6"],
+      "settings": {
+        "eyebrow": "Seizoensaanbod",
+        "title": "<p>Het beste van het <em>seizoen</em>, op uw bord.</p>",
+        "lead": "Ons aanbod volgt het ritme van het seizoen. Elke week nieuwe bereidingen, seizoenswild in het najaar, BBQ-pakketten in de zomer — en altijd onze huisbereidingen.",
+        "cta_label": "Informeer naar het aanbod",
+        "season_badge": "Seizoensaanbod"
+      }
+    },
+    "mn_reviews": {
+      "type": "manuel-reviews",
+      "blocks": {
+        "r1": { "type": "quote", "settings": { "quote": "Ik koop hier al meer dan twintig jaar mijn vlees. De kwaliteit is constant uitstekend — je proeft het verschil.", "cite": "Marleen V. · vaste klant" } },
+        "r2": { "type": "quote", "settings": { "quote": "De BBQ-pakketten zijn fantastisch. Alles gemarineerd, klaar voor het vuur. Mijn gasten waren onder de indruk.", "cite": "Joris D. · via Google" } },
+        "r3": { "type": "quote", "settings": { "quote": "Anoeshka onthoudt wat je graag hebt. Dat persoonlijk contact — dat vind je nergens meer.", "cite": "Nathalie S. · buurtklant" } },
+        "r4": { "type": "quote", "settings": { "quote": "De huisgemaakte pâté is het beste wat ik ooit gegeten heb. Geen vergelijking met de supermarkt.", "cite": "Luc B. · via Facebook" } },
+        "r5": { "type": "quote", "settings": { "quote": "Stoofvlees van Manuel is levensveranderend. Letterlijk. Ik kom er elke vrijdag voor langs.", "cite": "Steven T. · trouwe klant" } },
+        "r6": { "type": "quote", "settings": { "quote": "Echte vakmanschap, eerlijke prijs, vriendelijke bediening. Wat wil je nog meer van een slager?", "cite": "An M. · 5 sterren Google" } }
+      },
+      "block_order": ["r1", "r2", "r3", "r4", "r5", "r6"],
+      "settings": {
+        "eyebrow": "Wat klanten zeggen",
+        "title": "<p>Bekroond door de buurt, <em>vertrouwd</em> door de toonbank.</p>"
+      }
+    },
+    "mn_visit": {
+      "type": "manuel-visit",
+      "blocks": {
+        "h1": { "type": "hour", "settings": { "day": "Maandag",   "hours": "8u30 — 18u00" } },
+        "h2": { "type": "hour", "settings": { "day": "Dinsdag",   "hours": "Gesloten", "closed": true } },
+        "h3": { "type": "hour", "settings": { "day": "Woensdag",  "hours": "8u30 — 18u00" } },
+        "h4": { "type": "hour", "settings": { "day": "Donderdag", "hours": "8u30 — 18u00" } },
+        "h5": { "type": "hour", "settings": { "day": "Vrijdag",   "hours": "8u30 — 18u30" } },
+        "h6": { "type": "hour", "settings": { "day": "Zaterdag",  "hours": "7u30 — 17u00" } },
+        "h7": { "type": "hour", "settings": { "day": "Zondag",    "hours": "8u00 — 12u30" } }
+      },
+      "block_order": ["h1", "h2", "h3", "h4", "h5", "h6", "h7"],
+      "settings": {
+        "eyebrow": "Bezoek ons",
+        "title": "<p>Welkom in onze <em>slagerij</em>.</p>",
+        "lead": "U vindt ons in het hart van de buurt — met een ruime parking voor de deur. Kom langs voor vers advies, proef de dagbereiding, of bestel vooraf.",
+        "shop_name": "Keurslager Manuel en Anoeshka",
+        "address": "[STRAAT EN NUMMER]<br>[POSTCODE GEMEENTE]<br>België",
+        "address_short": "[ADRES] · [GEMEENTE]",
+        "phone": "[TEL INVULLEN]",
+        "phone_link": "+32XXXXXXXXX",
+        "email": "info@[DOMEIN].be",
+        "directions_link": "https://maps.google.com/?q=[ADRES+GEMEENTE]"
+      }
+    },
+    "mn_cta": {
+      "type": "manuel-cta",
+      "settings": {
+        "eyebrow": "Bestellen · vragen · contact",
+        "title": "<p>Klaar om te bestellen? <em>Bel of mail</em> ons.</p>",
+        "lead": "Voor grote bestellingen, BBQ-pakketten of feestbereidingen contacteert u ons het best op voorhand. Wij helpen u graag.",
+        "cta_phone": "Bel ons: [TEL INVULLEN]",
+        "phone_link": "+32XXXXXXXXX",
+        "cta_email": "Mail ons",
+        "email": "info@[DOMEIN].be",
+        "note": "Bestellingen voor feesten en events graag minstens 3 werkdagen op voorhand."
+      }
+    },
+    "mn_mark": {
+      "type": "manuel-mark",
+      "settings": {
+        "signature": "Manuel & Anoeshka",
+        "subline": "Erkend Keurslager · Uw vakslager van vertrouwen",
+        "keur_label": "Keurslager"
+      }
+    }
+  },
+  "order": [
+    "mn_overture",
+    "mn_about",
+    "mn_products",
+    "mn_seasonal",
+    "mn_reviews",
+    "mn_visit",
+    "mn_cta",
+    "mn_mark"
+  ]
+}

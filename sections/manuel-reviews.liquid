@@ -1,0 +1,70 @@
+{{ 'manuel-theme.css' | asset_url | stylesheet_tag }}
+
+<section class="mn mn-reviews" aria-label="Getuigenissen van klanten">
+
+  <div class="mn-reviews__head mn-reveal">
+    <div class="mn-eyebrow" style="justify-content: center; margin-bottom: 20px;">
+      {{ section.settings.eyebrow | default: 'Wat klanten zeggen' }}
+    </div>
+    <h2 class="mn-h2" style="color: var(--mn-cream); max-width: 660px; margin: 0 auto;">
+      {{ section.settings.title | default: '<p>Bekroond door de buurt, <em>vertrouwd</em> door de toonbank.</p>' }}
+    </h2>
+  </div>
+
+  <div class="mn-reviews__marquee">
+    <div class="mn-reviews__track">
+      {%- for i in (1..2) -%}
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'quote' -%}
+            <div class="mn-reviews__quote">
+              <div>
+                <div class="mn-reviews__stars" aria-label="5 sterren">
+                  {%- for s in (1..5) -%}★{%- endfor -%}
+                </div>
+                <blockquote>"{{ block.settings.quote | default: 'De beste slager van de buurt.' }}"</blockquote>
+                <cite>— {{ block.settings.cite | default: 'Tevreden klant' }}</cite>
+              </div>
+            </div>
+            <span style="display:block; width:1px; background: rgba(240,230,214,0.07); flex-shrink:0; align-self: stretch;"></span>
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endfor -%}
+    </div>
+  </div>
+
+</section>
+
+{% schema %}
+{
+  "name": "Manuel · Reviews",
+  "tag": "section",
+  "max_blocks": 12,
+  "settings": [
+    { "type": "text",     "id": "eyebrow", "label": "Eyebrow", "default": "Wat klanten zeggen" },
+    { "type": "richtext", "id": "title",   "label": "Titel",   "default": "<p>Bekroond door de buurt, <em>vertrouwd</em> door de toonbank.</p>" }
+  ],
+  "blocks": [
+    {
+      "type": "quote",
+      "name": "Getuigenis",
+      "settings": [
+        { "type": "textarea", "id": "quote", "label": "Citaat" },
+        { "type": "text",     "id": "cite",  "label": "Naam / bron" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Manuel · Reviews",
+      "blocks": [
+        { "type": "quote", "settings": { "quote": "Ik koop hier al meer dan twintig jaar mijn vlees. De kwaliteit is constant uitstekend — je proeft het verschil.", "cite": "Marleen V. · vaste klant" } },
+        { "type": "quote", "settings": { "quote": "De BBQ-pakketten zijn fantastisch. Alles gemarineerd, klaar voor het vuur. Mijn gasten waren onder de indruk.", "cite": "Joris D. · via Google" } },
+        { "type": "quote", "settings": { "quote": "Anoeshka onthoudt wat je graag hebt. Dat persoonlijk contact — dat vind je nergens meer.", "cite": "Nathalie S. · buurtklant" } },
+        { "type": "quote", "settings": { "quote": "De huisgemaakte pâté is het beste wat ik ooit gegeten heb. Geen vergelijking met de supermarkt.", "cite": "Luc B. · via Facebook" } },
+        { "type": "quote", "settings": { "quote": "Stoofvlees van Manuel is levensveranderend. Letterlijk. Ik kom er elke vrijdag voor langs.", "cite": "Steven T. · trouwe klant" } },
+        { "type": "quote", "settings": { "quote": "Echte vakmanschap, eerlijke prijs, vriendelijke bediening. Wat wil je nog meer van een slager?", "cite": "An M. · 5 sterren Google" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

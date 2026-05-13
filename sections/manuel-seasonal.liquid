@@ -1,0 +1,134 @@
+{{ 'manuel-theme.css' | asset_url | stylesheet_tag }}
+
+<section class="mn mn-light mn-seasonal mn-section" id="seizoensaanbod">
+  <div class="mn-wrap">
+    <div class="mn-seasonal__grid">
+
+      {%- comment -%} Links: tekst + lijst {%- endcomment -%}
+      <div>
+        <div class="mn-eyebrow mn-reveal" style="--d: 0ms;">
+          {{ section.settings.eyebrow | default: 'Seizoensaanbod' }}
+        </div>
+        <h2 class="mn-h2 mn-reveal" style="--d: 80ms; margin-top: 18px;">
+          {{ section.settings.title | default: '<p>Het beste van het <em>seizoen</em>, op uw bord.</p>' }}
+        </h2>
+        <p class="mn-lead mn-reveal" style="--d: 160ms; margin-top: 18px;">
+          {{ section.settings.lead | default: 'Ons aanbod volgt het ritme van het seizoen. Elke week nieuwe bereidingen, seizoenswild in het najaar, BBQ-pakketten in de zomer — en altijd onze huisbereidingen.' }}
+        </p>
+
+        <ul class="mn-seasonal__list mn-stagger">
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'item' -%}
+              <li class="mn-seasonal__item">
+                <div class="mn-seasonal__item-left">
+                  <span class="mn-seasonal__item-name">{{ block.settings.name | default: 'Seizoensproduct' }}</span>
+                  {%- if block.settings.sub != blank -%}
+                    <span class="mn-seasonal__item-sub">{{ block.settings.sub }}</span>
+                  {%- endif -%}
+                </div>
+                {%- if block.settings.price != blank -%}
+                  <span class="mn-seasonal__item-price">{{ block.settings.price }}</span>
+                {%- endif -%}
+              </li>
+            {%- endif -%}
+          {%- endfor -%}
+        </ul>
+
+        <div class="mn-reveal" style="--d: 240ms; margin-top: 36px;">
+          <a href="{{ section.settings.cta_link | default: '#contact' }}" class="mn-btn mn-btn--ghost">
+            {{ section.settings.cta_label | default: 'Informeer naar het aanbod' }}
+            <svg class="arrow" viewBox="0 0 16 12" fill="none" aria-hidden="true">
+              <path d="M1 6h13m0 0L9 1m5 5l-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      {%- comment -%} Rechts: visuele kaart met badge {%- endcomment -%}
+      <div class="mn-seasonal__visual mn-reveal" style="--d: 80ms;">
+        <svg class="bg" viewBox="0 0 600 740" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <linearGradient id="mnSeasonBg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#2c1810"/>
+              <stop offset="1" stop-color="#1a0e0b"/>
+            </linearGradient>
+            <radialGradient id="mnSeasonGlow" cx="0.4" cy="0.6" r="0.6">
+              <stop offset="0" stop-color="#b8892a" stop-opacity="0.35"/>
+              <stop offset="1" stop-color="#b8892a" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <rect width="600" height="740" fill="url(#mnSeasonBg)"/>
+          <rect width="600" height="740" fill="url(#mnSeasonGlow)"/>
+
+          <!-- Decorative herb / sprig illustration -->
+          <g stroke="#b8892a" stroke-width="0.8" fill="none" opacity="0.3">
+            <path d="M300 600L300 200"/>
+            <path d="M300 500C270 480 240 460 230 440"/>
+            <path d="M300 500C330 480 360 460 370 440"/>
+            <path d="M300 420C265 395 240 370 225 340"/>
+            <path d="M300 420C335 395 360 370 375 340"/>
+            <path d="M300 340C268 310 245 285 232 258"/>
+            <path d="M300 340C332 310 355 285 368 258"/>
+            <path d="M300 260C275 236 258 215 248 192"/>
+            <path d="M300 260C325 236 342 215 352 192"/>
+          </g>
+          <g fill="#b8892a" opacity="0.5">
+            <ellipse cx="228" cy="436" rx="16" ry="7" transform="rotate(-28 228 436)"/>
+            <ellipse cx="372" cy="436" rx="16" ry="7" transform="rotate(28 372 436)"/>
+            <ellipse cx="223" cy="336" rx="20" ry="8" transform="rotate(-35 223 336)"/>
+            <ellipse cx="377" cy="336" rx="20" ry="8" transform="rotate(35 377 336)"/>
+            <ellipse cx="246" cy="255" rx="17" ry="7" transform="rotate(-38 246 255)"/>
+            <ellipse cx="354" cy="255" rx="17" ry="7" transform="rotate(38 354 255)"/>
+            <ellipse cx="246" cy="190" rx="14" ry="5" transform="rotate(-40 246 190)"/>
+            <ellipse cx="354" cy="190" rx="14" ry="5" transform="rotate(40 354 190)"/>
+          </g>
+
+          <!-- Photo placeholder hint -->
+          <text x="300" y="690" text-anchor="middle" font-family="'Inter Tight',sans-serif" font-size="9" letter-spacing="2.5" fill="#b8892a" opacity="0.3">[ FOTO SEIZOENSPRODUCT ]</text>
+        </svg>
+        <div class="badge">{{ section.settings.season_badge | default: 'Nieuw seizoen' }}</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Manuel · Seizoensaanbod",
+  "tag": "section",
+  "max_blocks": 10,
+  "settings": [
+    { "type": "text",     "id": "eyebrow",       "label": "Eyebrow",           "default": "Seizoensaanbod" },
+    { "type": "richtext", "id": "title",         "label": "Titel",             "default": "<p>Het beste van het <em>seizoen</em>, op uw bord.</p>" },
+    { "type": "textarea", "id": "lead",          "label": "Lead tekst" },
+    { "type": "text",     "id": "cta_label",     "label": "CTA tekst",         "default": "Informeer naar het aanbod" },
+    { "type": "url",      "id": "cta_link",      "label": "CTA link" },
+    { "type": "text",     "id": "season_badge",  "label": "Visual badge tekst","default": "Nieuw seizoen" }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Seizoensitem",
+      "settings": [
+        { "type": "text", "id": "name",  "label": "Naam",           "default": "Seizoensproduct" },
+        { "type": "text", "id": "sub",   "label": "Subtekst / omschrijving" },
+        { "type": "text", "id": "price", "label": "Prijs (optioneel)" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Manuel · Seizoensaanbod",
+      "blocks": [
+        { "type": "item", "settings": { "name": "Fazant op het been",     "sub": "Seizoenswild · oktober — januari",      "price": "vraag prijs" } },
+        { "type": "item", "settings": { "name": "Wildzwijngebraad",       "sub": "Seizoenswild · gerijpt",                "price": "vraag prijs" } },
+        { "type": "item", "settings": { "name": "BBQ-pakket Zomer",       "sub": "voor 4 personen · gemarineerd",         "price": "vanaf 48€" } },
+        { "type": "item", "settings": { "name": "Lamsrug",                "sub": "Voorjaarslam · Belgisch",               "price": "dagprijs" } },
+        { "type": "item", "settings": { "name": "Stoofvlees met Duvel",   "sub": "Bereide maaltijd · vers per dag",       "price": "€/kg" } },
+        { "type": "item", "settings": { "name": "Kerstkalkoen op bestelling", "sub": "Reserveer tijdig · dec",           "price": "op bestelling" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
